@@ -57,6 +57,9 @@
     .card.ql-a { border-top-color: #3b82f6; }
     .card.ql-b { border-top-color: #6366f1; }
     .card.laurentiens { border-top-color: #10b981; }
+    .card.ql-d { border-top-color: #0ea5e9; }
+    .card.ql-e { border-top-color: #7c3aed; }
+    .card.ql-f { border-top-color: #f97316; }
 
     .card-company { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 0.3rem; }
     .card-label { font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; }
@@ -103,6 +106,9 @@
     .ql-a .quote-color-bar { background: #3b82f6; }
     .ql-b .quote-color-bar { background: #6366f1; }
     .laurentiens .quote-color-bar { background: #10b981; }
+    .ql-d .quote-color-bar { background: #0ea5e9; }
+    .ql-e .quote-color-bar { background: #7c3aed; }
+    .ql-f .quote-color-bar { background: #f97316; }
 
     table {
       width: 100%;
@@ -178,6 +184,9 @@
     .comparison-table .col-ql-a { border-top: 3px solid #3b82f6; }
     .comparison-table .col-ql-b { border-top: 3px solid #6366f1; }
     .comparison-table .col-laurentiens { border-top: 3px solid #10b981; }
+    .comparison-table .col-ql-d { border-top: 3px solid #0ea5e9; }
+    .comparison-table .col-ql-e { border-top: 3px solid #7c3aed; }
+    .comparison-table .col-ql-f { border-top: 3px solid #f97316; }
     .yes { color: #059669; font-weight: 600; }
     .no { color: #9ca3af; }
     .highlight-row td { background: #fffbeb; font-weight: 600; }
@@ -231,7 +240,7 @@
 
   <header>
     <h1>Comparaison de soumissions — Remplacement du quai</h1>
-    <p>Lac Dufresne, St-Lucie &nbsp;·&nbsp; 1144 chemin des îles &nbsp;·&nbsp; Mis à jour : 23 mai 2026</p>
+    <p>Lac Dufresne, St-Lucie &nbsp;·&nbsp; 1144 chemin des îles &nbsp;·&nbsp; Mis à jour : 25 mai 2026</p>
   </header>
 
   <div class="context-box">
@@ -269,6 +278,33 @@
         <div class="card-label">Option C — Type Absolu</div>
         <div class="card-devis">Soumission #13052026-01 · 13 mai 2026</div>
         <div class="card-total">$8 443,76</div>
+        <div class="card-total-note">taxes incluses</div>
+        <span class="card-badge badge-installed">Livraison + installation incluses</span>
+      </div>
+
+      <div class="card ql-d">
+        <div class="card-company">Quai Lafantaisie</div>
+        <div class="card-label">Option D — Cèdre, 2 flottants + livraison</div>
+        <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
+        <div class="card-total">$8 323,04</div>
+        <div class="card-total-note">taxes incluses</div>
+        <span class="card-badge badge-installed">Livraison + installation incluses</span>
+      </div>
+
+      <div class="card ql-e">
+        <div class="card-company">Quai Lafantaisie</div>
+        <div class="card-label">Option E — Plastique gris, 8'×12' + livraison</div>
+        <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
+        <div class="card-total">$9 239,39</div>
+        <div class="card-total-note">taxes incluses</div>
+        <span class="card-badge badge-installed">Livraison + installation incluses</span>
+      </div>
+
+      <div class="card ql-f">
+        <div class="card-company">Quai Lafantaisie</div>
+        <div class="card-label">Option F — Plastique gris, 10'×12' + livraison</div>
+        <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
+        <div class="card-total">$10 377,64</div>
         <div class="card-total-note">taxes incluses</div>
         <span class="card-badge badge-installed">Livraison + installation incluses</span>
       </div>
@@ -466,6 +502,144 @@
       </div>
     </div>
 
+    <!-- OPTION D -->
+    <div class="quote-block ql-d">
+      <div class="quote-color-bar"></div>
+      <div class="quote-header">
+        <div class="quote-header-left">
+          <h3>Quai Lafantaisie — Option D</h3>
+          <p>Devis #E25742 · 14 mai 2026 · Cèdre rouge · Livraison + installation incluses</p>
+        </div>
+        <div class="quote-header-right">
+          <div class="quote-total-label">Total (taxes incl.)</div>
+          <div class="quote-total-amount">$8 323,04</div>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>Description</th><th>Qté</th><th>Prix unit.</th><th>Escompte</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr class="row-section"><td colspan="5">Sections de quai — Cèdre rouge</td></tr>
+          <tr><td>Quai aluminium sur poteaux 4'×10'</td><td>1</td><td>$825,00</td><td>30%</td><td>$577,50</td></tr>
+          <tr><td>Quai aluminium semi-flottant 4'×10'</td><td>1</td><td>$1 135,00</td><td>30%</td><td>$794,50</td></tr>
+          <tr><td>Quai aluminium flottant 4'×10'</td><td>1</td><td>$1 450,00</td><td>30%</td><td>$1 015,00</td></tr>
+          <tr><td>Quai aluminium flottant <strong>8'×12'</strong></td><td>1</td><td>$3 060,00</td><td>25%</td><td>$2 295,00</td></tr>
+          <tr class="row-section"><td colspan="5">Accessoires</td></tr>
+          <tr><td>Pentures ALU-BOIS (4 unités)</td><td>1</td><td>$170,00</td><td>—</td><td>$170,00</td></tr>
+          <tr><td>Ensemble pentures poteaux amovibles (4 unités)</td><td>1</td><td>$90,00</td><td>—</td><td>$90,00</td></tr>
+          <tr><td>Ensemble pentures flottantes amovibles (4 unités)</td><td>1</td><td>$175,00</td><td>—</td><td>$175,00</td></tr>
+          <tr><td>Poteau acier galvanisé 1 5/8 — 4 pieds</td><td>2</td><td>$26,00</td><td>—</td><td>$52,00</td></tr>
+          <tr><td>Plaque de départ alu martelé 2'×4' avec pentures</td><td>2</td><td>$350,00</td><td>—</td><td>$700,00</td></tr>
+          <tr><td>Plaque à chaîne amovible</td><td>2</td><td>$85,00</td><td>—</td><td>$170,00</td></tr>
+          <tr class="row-section"><td colspan="5">Livraison et installation</td></tr>
+          <tr><td>Livraison (prix à confirmer selon distance)</td><td>1</td><td>$600,00</td><td>—</td><td>$600,00</td></tr>
+          <tr><td>Installation</td><td>1</td><td>$600,00</td><td>—</td><td>$600,00</td></tr>
+          <tr class="row-subtotal"><td colspan="4">Sous-total (après escomptes)</td><td>$7 239,00</td></tr>
+          <tr class="row-discount"><td colspan="4">Escompte total</td><td>−$1 788,00</td></tr>
+          <tr class="row-tax"><td colspan="4">TPS (5%)</td><td>$361,95</td></tr>
+          <tr class="row-tax"><td colspan="4">TVQ (9,975%)</td><td>$722,09</td></tr>
+          <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$8 323,04</td></tr>
+        </tbody>
+      </table>
+      <div class="quote-footer">
+        <span><strong>Livraison + installation incluses</strong> (prix livraison à confirmer)</span>
+        <span><strong>Garantie :</strong> 20 ans</span>
+        <span><strong>Validité :</strong> 7 jours</span>
+        <span><strong>Dépôt :</strong> 30% à la commande</span>
+      </div>
+    </div>
+
+    <!-- OPTION E -->
+    <div class="quote-block ql-e">
+      <div class="quote-color-bar"></div>
+      <div class="quote-header">
+        <div class="quote-header-left">
+          <h3>Quai Lafantaisie — Option E</h3>
+          <p>Devis #E25742 · 14 mai 2026 · Plastique gris · Flottant 8'×12' · Livraison + installation incluses</p>
+        </div>
+        <div class="quote-header-right">
+          <div class="quote-total-label">Total (taxes incl.)</div>
+          <div class="quote-total-amount">$9 239,39</div>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>Description</th><th>Qté</th><th>Prix unit.</th><th>Escompte</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr class="row-section"><td colspan="5">Sections de quai — Plastique gris</td></tr>
+          <tr><td>Quai aluminium sur poteaux 4'×10'</td><td>1</td><td>$1 000,00</td><td>30%</td><td>$700,00</td></tr>
+          <tr><td>Quai aluminium semi-flottant 4'×10'</td><td>1</td><td>$1 320,00</td><td>30%</td><td>$924,00</td></tr>
+          <tr><td>Quai aluminium flottant 4'×10'</td><td>1</td><td>$1 650,00</td><td>30%</td><td>$1 155,00</td></tr>
+          <tr><td>Quai aluminium flottant <strong>8'×12'</strong></td><td>1</td><td>$3 600,00</td><td>25%</td><td>$2 700,00</td></tr>
+          <tr class="row-section"><td colspan="5">Accessoires</td></tr>
+          <tr><td>Pentures ALU-BOIS (4 unités)</td><td>1</td><td>$170,00</td><td>—</td><td>$170,00</td></tr>
+          <tr><td>Ensemble pentures poteaux amovibles (4 unités)</td><td>1</td><td>$90,00</td><td>—</td><td>$90,00</td></tr>
+          <tr><td>Ensemble pentures flottantes amovibles (4 unités)</td><td>1</td><td>$175,00</td><td>—</td><td>$175,00</td></tr>
+          <tr><td>Poteau acier galvanisé 1 5/8 — 4 pieds</td><td>2</td><td>$26,00</td><td>—</td><td>$52,00</td></tr>
+          <tr><td>Plaque de départ alu martelé 2'×4' avec pentures</td><td>2</td><td>$350,00</td><td>—</td><td>$700,00</td></tr>
+          <tr><td>Plaque à chaîne amovible</td><td>2</td><td>$85,00</td><td>—</td><td>$170,00</td></tr>
+          <tr class="row-section"><td colspan="5">Livraison et installation</td></tr>
+          <tr><td>Livraison (prix à confirmer selon distance)</td><td>1</td><td>$600,00</td><td>—</td><td>$600,00</td></tr>
+          <tr><td>Installation</td><td>1</td><td>$600,00</td><td>—</td><td>$600,00</td></tr>
+          <tr class="row-subtotal"><td colspan="4">Sous-total (après escomptes)</td><td>$8 036,00</td></tr>
+          <tr class="row-discount"><td colspan="4">Escompte total</td><td>−$2 091,00</td></tr>
+          <tr class="row-tax"><td colspan="4">TPS (5%)</td><td>$401,80</td></tr>
+          <tr class="row-tax"><td colspan="4">TVQ (9,975%)</td><td>$801,59</td></tr>
+          <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$9 239,39</td></tr>
+        </tbody>
+      </table>
+      <div class="quote-footer">
+        <span><strong>Livraison + installation incluses</strong> (prix livraison à confirmer)</span>
+        <span><strong>Garantie :</strong> 20 ans</span>
+        <span><strong>Validité :</strong> 7 jours</span>
+        <span><strong>Dépôt :</strong> 30% à la commande</span>
+      </div>
+    </div>
+
+    <!-- OPTION F -->
+    <div class="quote-block ql-f">
+      <div class="quote-color-bar"></div>
+      <div class="quote-header">
+        <div class="quote-header-left">
+          <h3>Quai Lafantaisie — Option F</h3>
+          <p>Devis #E25742 · 14 mai 2026 · Plastique gris · Flottant 10'×12' · Livraison + installation incluses</p>
+        </div>
+        <div class="quote-header-right">
+          <div class="quote-total-label">Total (taxes incl.)</div>
+          <div class="quote-total-amount">$10 377,64</div>
+        </div>
+      </div>
+      <table>
+        <thead><tr><th>Description</th><th>Qté</th><th>Prix unit.</th><th>Escompte</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr class="row-section"><td colspan="5">Sections de quai — Plastique gris</td></tr>
+          <tr><td>Quai aluminium sur poteaux 4'×10'</td><td>1</td><td>$1 000,00</td><td>30%</td><td>$700,00</td></tr>
+          <tr><td>Quai aluminium semi-flottant 4'×10'</td><td>1</td><td>$1 320,00</td><td>30%</td><td>$924,00</td></tr>
+          <tr><td>Quai aluminium flottant 4'×10'</td><td>1</td><td>$1 650,00</td><td>30%</td><td>$1 155,00</td></tr>
+          <tr><td>Quai aluminium flottant <strong>10'×12'</strong></td><td>1</td><td>$4 500,00</td><td>18%</td><td>$3 690,00</td></tr>
+          <tr class="row-section"><td colspan="5">Accessoires</td></tr>
+          <tr><td>Pentures ALU-BOIS (4 unités)</td><td>1</td><td>$170,00</td><td>—</td><td>$170,00</td></tr>
+          <tr><td>Ensemble pentures poteaux amovibles (4 unités)</td><td>1</td><td>$90,00</td><td>—</td><td>$90,00</td></tr>
+          <tr><td>Ensemble pentures flottantes amovibles (4 unités)</td><td>1</td><td>$175,00</td><td>—</td><td>$175,00</td></tr>
+          <tr><td>Poteau acier galvanisé 1 5/8 — 4 pieds</td><td>2</td><td>$26,00</td><td>—</td><td>$52,00</td></tr>
+          <tr><td>Plaque de départ alu martelé 2'×4' avec pentures</td><td>2</td><td>$350,00</td><td>—</td><td>$700,00</td></tr>
+          <tr><td>Plaque à chaîne amovible</td><td>2</td><td>$85,00</td><td>—</td><td>$170,00</td></tr>
+          <tr class="row-section"><td colspan="5">Livraison et installation</td></tr>
+          <tr><td>Livraison (prix à confirmer selon distance)</td><td>1</td><td>$600,00</td><td>—</td><td>$600,00</td></tr>
+          <tr><td>Installation</td><td>1</td><td>$600,00</td><td>—</td><td>$600,00</td></tr>
+          <tr class="row-subtotal"><td colspan="4">Sous-total (après escomptes)</td><td>$9 026,00</td></tr>
+          <tr class="row-discount"><td colspan="4">Escompte total</td><td>−$2 001,00</td></tr>
+          <tr class="row-tax"><td colspan="4">TPS (5%)</td><td>$451,30</td></tr>
+          <tr class="row-tax"><td colspan="4">TVQ (9,975%)</td><td>$900,34</td></tr>
+          <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$10 377,64</td></tr>
+        </tbody>
+      </table>
+      <div class="quote-footer">
+        <span><strong>Livraison + installation incluses</strong> (prix livraison à confirmer)</span>
+        <span><strong>Garantie :</strong> 20 ans</span>
+        <span><strong>Validité :</strong> 7 jours</span>
+        <span><strong>Dépôt :</strong> 30% à la commande</span>
+      </div>
+    </div>
+
   </section>
 
   <!-- TABLEAU COMPARATIF -->
@@ -476,83 +650,78 @@
         <thead>
           <tr>
             <th>Critère</th>
-            <th class="col-ql-a">A — Lafantaisie<br><small>#E25548</small></th>
-            <th class="col-ql-b">B — Lafantaisie<br><small>#E25742</small></th>
-            <th class="col-laurentiens">C — Laurentiens<br><small>#13052026-01</small></th>
+            <th class="col-ql-a">A — Lafantaisie<br><small>Cèdre, ramassage</small></th>
+            <th class="col-ql-b">B — Lafantaisie<br><small>Cèdre, ramassage</small></th>
+            <th class="col-laurentiens">C — Laurentiens<br><small>Cèdre, livr.+install.</small></th>
+            <th class="col-ql-d">D — Lafantaisie<br><small>Cèdre, livr.+install.</small></th>
+            <th class="col-ql-e">E — Lafantaisie<br><small>Plastique, 8'×12'</small></th>
+            <th class="col-ql-f">F — Lafantaisie<br><small>Plastique, 10'×12'</small></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Section sur poteaux / pieux</td>
-            <td>4'×10'</td>
-            <td>4'×10'</td>
-            <td>4'×10'</td>
+            <td>4'×10'</td><td>4'×10'</td><td>4'×10'</td><td>4'×10'</td><td>4'×10'</td><td>4'×10'</td>
           </tr>
           <tr>
             <td>Section semi-flottante</td>
-            <td>4'×10'</td>
-            <td>4'×10'</td>
-            <td>4'×14'</td>
+            <td>4'×10'</td><td>4'×10'</td><td>4'×14'</td><td>4'×10'</td><td>4'×10'</td><td>4'×10'</td>
           </tr>
           <tr class="highlight-row">
-            <td>Plateforme flottante</td>
+            <td>Plateforme(s) flottante(s)</td>
             <td>8'×12' <small>(96 pi²)</small></td>
             <td>4'×10' <small>(40 pi²)</small></td>
             <td>10'×12' <small>(120 pi²)</small></td>
+            <td>4'×10' + 8'×12' <small>(136 pi²)</small></td>
+            <td>4'×10' + 8'×12' <small>(136 pi²)</small></td>
+            <td>4'×10' + 10'×12' <small>(160 pi²)</small></td>
           </tr>
           <tr>
             <td>Platelage</td>
-            <td>Cèdre rouge</td>
-            <td>Cèdre rouge</td>
-            <td>Cèdre</td>
+            <td>Cèdre rouge</td><td>Cèdre rouge</td><td>Cèdre</td><td>Cèdre rouge</td><td>Plastique gris</td><td>Plastique gris</td>
           </tr>
           <tr>
             <td>Structure flottante</td>
-            <td>Alu standard</td>
-            <td>Alu standard</td>
-            <td>Alu caisson 16"</td>
-          </tr>
-          <tr>
-            <td>Départ / connexion rive</td>
-            <td>Poteaux acier + plaques à chaîne</td>
-            <td>Plaques alu martelé 2'×4' (×2)</td>
-            <td>Pieux 4' avec base 6×6</td>
+            <td>Alu standard</td><td>Alu standard</td><td>Alu caisson 16"</td><td>Alu standard</td><td>Alu standard</td><td>Alu standard</td>
           </tr>
           <tr>
             <td>Garantie</td>
-            <td>20 ans</td>
-            <td>20 ans</td>
-            <td>Non spécifiée</td>
+            <td>20 ans</td><td>20 ans</td><td>Non spécifiée</td><td>20 ans</td><td>20 ans</td><td>20 ans</td>
           </tr>
           <tr>
             <td>Livraison</td>
             <td class="no">Ramassage seul.</td>
             <td class="no">Ramassage seul.</td>
             <td class="yes">Incluse ($550)</td>
+            <td class="yes">Incluse (~$600)</td>
+            <td class="yes">Incluse (~$600)</td>
+            <td class="yes">Incluse (~$600)</td>
           </tr>
           <tr>
             <td>Installation</td>
             <td class="no">Non incluse</td>
             <td class="no">Non incluse</td>
             <td class="yes">Incluse ($550)</td>
+            <td class="yes">Incluse ($600)</td>
+            <td class="yes">Incluse ($600)</td>
+            <td class="yes">Incluse ($600)</td>
           </tr>
           <tr>
             <td>Validité du devis</td>
-            <td>7 jours</td>
-            <td>7 jours</td>
-            <td>30 jours</td>
+            <td>7 jours</td><td>7 jours</td><td>30 jours</td><td>7 jours</td><td>7 jours</td><td>7 jours</td>
           </tr>
           <tr>
             <td>Modalités d'acompte</td>
-            <td>30% à la commande</td>
-            <td>30% à la commande</td>
-            <td>40% + 30% + 30%</td>
+            <td>30%</td><td>30%</td><td>40%+30%+30%</td><td>30%</td><td>30%</td><td>30%</td>
           </tr>
           <tr class="grand-row">
             <td>TOTAL (taxes incl.)</td>
             <td>$5 462,46</td>
             <td>$4 459,88</td>
             <td>$8 443,76</td>
+            <td>$8 323,04</td>
+            <td>$9 239,39</td>
+            <td>$10 377,64</td>
           </tr>
         </tbody>
       </table>
