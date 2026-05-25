@@ -305,6 +305,29 @@
       border-top: 1px solid #e5e7eb;
     }
 
+    /* Current dock schematic */
+    .current-dock-schema {
+      margin-top: 1rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid #bfdbfe;
+    }
+    .current-dock-schema-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .current-dock-legend {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 0.45rem;
+      font-size: 0.72rem;
+      color: #3b82f6;
+    }
+
     @media (max-width: 640px) {
       header h1 { font-size: 1.35rem; }
       .quote-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
@@ -322,6 +345,36 @@
   <div class="context-box">
     <strong>Contexte</strong>
     Le quai existant (fixe, tubes métal, revêtement bois, ~4'×30', avec plateforme flottante 6'×12' à l'extrémité en T) est en mauvais état — les hivers et la glace l'ont déplacé. On cherche une solution durable avec moins d'entretien. Profondeur mesurée au bout du quai : <strong>2 pi 2 po</strong> (niveau moyen du lac, variation max. ~1 pied).
+    <div class="current-dock-schema">
+      <div class="current-dock-schema-label">Configuration actuelle (avant remplacement)</div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="378" height="153" viewBox="0 0 378 153" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="378" height="153" fill="#dbeafe" rx="8"/>
+<rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
+<text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
+<text x="175.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Fixe</text>
+<rect x="40" y="59.0" width="270" height="36" fill="#a08060" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<circle cx="40.0" cy="65.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="40.0" cy="89.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="107.5" cy="65.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="107.5" cy="89.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="175.0" cy="65.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="175.0" cy="89.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="242.5" cy="65.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="242.5" cy="89.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="310.0" cy="65.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<circle cx="310.0" cy="89.0" r="3" fill="rgba(0,0,0,0.28)"/>
+<text x="175.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×30'</text>
+<text x="337.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottante</text>
+<rect x="310" y="23.0" width="54" height="108" fill="#c8a97e" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="337.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottante</text>
+<text x="337.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">6'×12'</text>
+<text x="202.0" y="150" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 36'</text>
+</svg>
+      <div class="current-dock-legend">
+        <span><span class="legend-dot" style="background:#a08060"></span>Quai fixe (tubes métal)</span>
+        <span><span class="legend-dot" style="background:#c8a97e"></span>Plateforme flottante en T</span>
+      </div>
+    </div>
   </div>
 
   <!-- RÉSUMÉ -->
