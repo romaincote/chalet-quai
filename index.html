@@ -37,39 +37,20 @@
     }
     .context-box strong { display: block; margin-bottom: 0.4rem; font-size: 1rem; }
 
-    /* Summary table */
-    .summary {
-      margin-bottom: 2.5rem;
-    }
+    /* Summary */
+    .summary { margin-bottom: 2.5rem; }
     .summary h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem; color: #374151; }
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-    }
     .company-group { margin-bottom: 1.5rem; }
     .company-group-label {
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #9ca3af;
-      margin-bottom: 0.6rem;
-      padding-left: 0.1rem;
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #9ca3af; margin-bottom: 0.6rem; padding-left: 0.1rem;
     }
     .company-group-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
 
     .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      padding: 1.4rem;
-      border-top: 4px solid transparent;
-      position: relative;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      display: block;
+      background: #fff; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      padding: 1.4rem; border-top: 4px solid transparent; position: relative;
+      cursor: pointer; text-decoration: none; color: inherit; display: block;
       transition: box-shadow 0.15s, transform 0.15s;
     }
     .card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.13); transform: translateY(-2px); }
@@ -81,19 +62,19 @@
     .card.ql-f { border-top-color: #f97316; }
     .card.laur-g { border-top-color: #0891b2; }
     .card.quai2go { border-top-color: #e11d48; }
+    .card.ql-l { border-top-color: #14b8a6; }
+    .card.laur-i { border-top-color: #8b5cf6; }
+    .card.ql-j { border-top-color: #d946ef; }
+    .card.ql-k { border-top-color: #ca8a04; }
+    .card.ql-m { border-top-color: #06b6d4; }
 
-    .card-company { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 0.3rem; }
     .card-label { font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem; }
     .card-devis { font-size: 0.8rem; color: #9ca3af; margin-bottom: 1rem; }
     .card-total { font-size: 1.6rem; font-weight: 800; color: #111827; }
     .card-total-note { font-size: 0.75rem; color: #6b7280; }
     .card-badge {
-      display: inline-block;
-      margin-top: 0.8rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 99px;
-      font-size: 0.72rem;
-      font-weight: 600;
+      display: inline-block; margin-top: 0.8rem; padding: 0.2rem 0.6rem;
+      border-radius: 99px; font-size: 0.72rem; font-weight: 600;
     }
     .badge-pickup { background: #fef3c7; color: #92400e; }
     .badge-installed { background: #d1fae5; color: #065f46; }
@@ -104,27 +85,37 @@
     .details h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem; color: #374151; }
 
     .quote-block {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      margin-bottom: 1.5rem;
+      background: #fff; border-radius: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 1.5rem;
     }
-    .quote-table-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
+    .quote-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .quote-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1.5rem;
-      border-bottom: 1px solid #f3f4f6;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 1rem 1.5rem; border-bottom: 1px solid #f3f4f6;
     }
     .quote-header-left h3 { font-size: 1.05rem; font-weight: 700; }
     .quote-header-left p { font-size: 0.82rem; color: #6b7280; margin-top: 0.1rem; }
-    .quote-header-right { text-align: right; }
+    .quote-header-right { text-align: right; flex-shrink: 0; }
     .quote-total-label { font-size: 0.75rem; color: #9ca3af; }
     .quote-total-amount { font-size: 1.4rem; font-weight: 800; color: #111827; }
+
+    /* Archive button */
+    .archive-btn {
+      margin-top: 0.45rem;
+      padding: 0.18rem 0.55rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #9ca3af;
+      background: none;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: color 0.12s, border-color 0.12s;
+      display: inline-block;
+    }
+    .archive-btn:hover { color: #ef4444; border-color: #fca5a5; }
+    .archive-btn.is-archived { color: #6b7280; border-color: #d1d5db; }
+    .archive-btn.is-archived:hover { color: #2563eb; border-color: #93c5fd; }
 
     .quote-color-bar { height: 4px; }
     .ql-a .quote-color-bar { background: #3b82f6; }
@@ -135,29 +126,20 @@
     .ql-f .quote-color-bar { background: #f97316; }
     .laur-g .quote-color-bar { background: #0891b2; }
     .quai2go .quote-color-bar { background: #e11d48; }
+    .ql-l .quote-color-bar { background: #14b8a6; }
+    .laur-i .quote-color-bar { background: #8b5cf6; }
+    .ql-j .quote-color-bar { background: #d946ef; }
+    .ql-k .quote-color-bar { background: #ca8a04; }
+    .ql-m .quote-color-bar { background: #06b6d4; }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
     thead th {
-      background: #f9fafb;
-      text-align: left;
-      padding: 0.6rem 1rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: #6b7280;
-      border-bottom: 1px solid #e5e7eb;
+      background: #f9fafb; text-align: left; padding: 0.6rem 1rem;
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.04em; color: #6b7280; border-bottom: 1px solid #e5e7eb;
     }
     thead th:not(:first-child) { text-align: right; }
-    tbody td {
-      padding: 0.6rem 1rem;
-      border-bottom: 1px solid #f3f4f6;
-      color: #374151;
-    }
+    tbody td { padding: 0.6rem 1rem; border-bottom: 1px solid #f3f4f6; color: #374151; }
     tbody td:not(:first-child) { text-align: right; }
     tbody tr:last-child td { border-bottom: none; }
     tbody tr:hover { background: #fafafa; }
@@ -170,79 +152,53 @@
     .included { color: #6b7280; font-style: italic; }
 
     .quote-footer {
-      padding: 0.8rem 1.5rem;
-      background: #f9fafb;
-      font-size: 0.8rem;
-      color: #6b7280;
-      border-top: 1px solid #f3f4f6;
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
+      padding: 0.8rem 1.5rem; background: #f9fafb; font-size: 0.8rem;
+      color: #6b7280; border-top: 1px solid #f3f4f6; display: flex; gap: 2rem; flex-wrap: wrap;
     }
     .quote-footer span strong { color: #374151; }
 
     /* Schematics */
     .schematics { margin-bottom: 2.5rem; }
     .schematics h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #374151; }
-    .schematics-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
-      gap: 1rem;
-    }
+    .schematics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(460px, 1fr)); gap: 1rem; }
     .schematic-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      padding: 1rem 1.2rem 0.8rem;
+      background: #fff; border-radius: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 1rem 1.2rem 0.8rem;
     }
-    .schematic-title {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #374151;
-      margin-bottom: 0.5rem;
-    }
+    .schematic-title { font-size: 0.82rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem; }
     .schematic-svg-wrap { overflow-x: auto; }
+    .schematic-svg-wrap a { display: block; }
+    .schematic-svg-wrap a svg { cursor: pointer; transition: opacity 0.15s; }
+    .schematic-svg-wrap a:hover svg { opacity: 0.85; }
     .schematic-legend {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-      margin-top: 0.55rem;
-      font-size: 0.72rem;
-      color: #6b7280;
+      display: flex; gap: 0.8rem; flex-wrap: wrap;
+      margin-top: 0.55rem; font-size: 0.72rem; color: #6b7280;
     }
     .legend-dot {
-      display: inline-block;
-      width: 10px; height: 10px;
-      border-radius: 2px;
-      vertical-align: middle;
-      margin-right: 3px;
+      display: inline-block; width: 10px; height: 10px;
+      border-radius: 2px; vertical-align: middle; margin-right: 3px;
     }
 
     /* Comparison table */
     .comparison { margin-bottom: 2.5rem; }
-    .comparison h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem; color: #374151; }
-    .comparison-table-wrap { overflow-x: auto; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-      background: #fff;
+    .comparison-header-row {
+      display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1rem;
     }
+    .comparison-header-row h2 { font-size: 1.15rem; font-weight: 600; color: #374151; }
+    .archived-toggle {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.82rem; color: #9ca3af; cursor: pointer;
+      user-select: none; white-space: nowrap;
+    }
+    .archived-toggle input[type="checkbox"] { accent-color: #6b7280; cursor: pointer; }
+    .comparison-table-wrap { overflow-x: auto; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .comparison-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; background: #fff; }
     .comparison-table th {
-      padding: 0.75rem 1rem;
-      text-align: left;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #6b7280;
-      background: #f9fafb;
-      border-bottom: 2px solid #e5e7eb;
+      padding: 0.75rem 1rem; text-align: left; font-size: 0.8rem; font-weight: 600;
+      color: #6b7280; background: #f9fafb; border-bottom: 2px solid #e5e7eb;
     }
     .comparison-table th:not(:first-child) { text-align: center; }
-    .comparison-table td {
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid #f3f4f6;
-      color: #374151;
-    }
+    .comparison-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #f3f4f6; color: #374151; }
     .comparison-table td:not(:first-child) { text-align: center; }
     .comparison-table .col-ql-a { border-top: 3px solid #3b82f6; }
     .comparison-table .col-ql-b { border-top: 3px solid #6366f1; }
@@ -252,6 +208,11 @@
     .comparison-table .col-ql-f { border-top: 3px solid #f97316; }
     .comparison-table .col-laur-g { border-top: 3px solid #0891b2; }
     .comparison-table .col-quai2go { border-top: 3px solid #e11d48; }
+    .comparison-table .col-ql-l { border-top: 3px solid #14b8a6; }
+    .comparison-table .col-laur-i { border-top: 3px solid #8b5cf6; }
+    .comparison-table .col-ql-j { border-top: 3px solid #d946ef; }
+    .comparison-table .col-ql-k { border-top: 3px solid #ca8a04; }
+    .comparison-table .col-ql-m { border-top: 3px solid #06b6d4; }
     .yes { color: #059669; font-weight: 600; }
     .no { color: #9ca3af; }
     .highlight-row td { background: #fffbeb; font-weight: 600; }
@@ -261,17 +222,10 @@
     /* Contacts */
     .contacts { margin-bottom: 2.5rem; }
     .contacts h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem; color: #374151; }
-    .contacts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-    }
+    .contacts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
     .contact-card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      padding: 1.2rem 1.4rem;
-      border-left: 4px solid transparent;
+      background: #fff; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      padding: 1.2rem 1.4rem; border-left: 4px solid transparent;
     }
     .contact-card.ql-a  { border-left-color: #3b82f6; }
     .contact-card.ql-b  { border-left-color: #6366f1; }
@@ -288,58 +242,54 @@
 
     /* Notes */
     .quote-notes {
-      padding: 0.75rem 1.5rem;
-      background: #fffbeb;
-      border-top: 1px solid #fde68a;
-      font-size: 0.84rem;
-      color: #92400e;
-      display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
+      padding: 0.75rem 1.5rem; background: #fffbeb; border-top: 1px solid #fde68a;
+      font-size: 0.84rem; color: #92400e; display: flex; align-items: baseline; gap: 0.5rem;
     }
     .quote-notes-label {
-      font-weight: 700;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      white-space: nowrap;
-      color: #b45309;
+      font-weight: 700; font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 0.05em; white-space: nowrap; color: #b45309;
     }
 
     footer {
-      text-align: center;
-      color: #9ca3af;
-      font-size: 0.78rem;
-      padding-top: 2rem;
-      border-top: 1px solid #e5e7eb;
+      text-align: center; color: #9ca3af; font-size: 0.78rem;
+      padding-top: 2rem; border-top: 1px solid #e5e7eb;
     }
 
     /* Current dock schematic */
-    .current-dock-schema {
-      margin-top: 1rem;
-      padding-top: 0.9rem;
-      border-top: 1px solid #bfdbfe;
-    }
+    .current-dock-schema { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid #bfdbfe; }
     .current-dock-schema-label {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #1e40af;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      font-size: 0.8rem; font-weight: 700; color: #1e40af;
+      margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;
     }
     .current-dock-legend {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-      margin-top: 0.45rem;
-      font-size: 0.72rem;
-      color: #3b82f6;
+      display: flex; gap: 0.8rem; flex-wrap: wrap;
+      margin-top: 0.45rem; font-size: 0.72rem; color: #3b82f6;
     }
+
+    /* Archived — hidden by default */
+    [data-archived="true"] { display: none; }
+    /* Comparison table reveals archived columns when checkbox checked */
+    body.show-archived .comparison-table th[data-archived="true"],
+    body.show-archived .comparison-table td[data-archived="true"] { display: table-cell; }
+
+    /* Archived details collapsed section */
+    .archived-details { margin-bottom: 2.5rem; border-top: 2px dashed #e5e7eb; padding-top: 1.5rem; }
+    .archived-details > summary {
+      font-size: 1.05rem; font-weight: 600; color: #9ca3af;
+      cursor: pointer; list-style: none; display: flex; align-items: center;
+      gap: 0.5rem; padding: 0.25rem 0;
+    }
+    .archived-details > summary::-webkit-details-marker { display: none; }
+    .archived-details > summary::before {
+      content: '▶'; font-size: 0.65rem; transition: transform 0.2s; flex-shrink: 0;
+    }
+    .archived-details[open] > summary::before { transform: rotate(90deg); }
+    .archived-details[open] > summary { margin-bottom: 1.5rem; }
 
     @media (max-width: 640px) {
       header h1 { font-size: 1.35rem; }
       .quote-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .comparison-header-row { flex-direction: column; gap: 0.5rem; }
     }
   </style>
 </head>
@@ -348,7 +298,7 @@
 
   <header>
     <h1>Comparaison de soumissions — Remplacement du quai</h1>
-    <p>Lac Dufresne, St-Lucie &nbsp;·&nbsp; 1144 chemin des îles &nbsp;·&nbsp; Mis à jour : 10 juin 2026</p>
+    <p>Lac Dufresne, St-Lucie &nbsp;·&nbsp; 1144 chemin des îles &nbsp;·&nbsp; Mis à jour : 18 juin 2026</p>
   </header>
 
   <div class="context-box">
@@ -416,14 +366,14 @@
     <div class="company-group">
       <div class="company-group-label">Quai Lafantaisie</div>
       <div class="company-group-cards">
-        <a class="card ql-a" href="#option-a">
+        <a class="card ql-a" href="#option-a" data-quote-id="option-a">
           <div class="card-label">Option A — Cèdre, grande plateforme</div>
           <div class="card-devis">Devis #E25548 · 11 mai 2026</div>
           <div class="card-total">$5 462,46</div>
           <div class="card-total-note">taxes incluses</div>
           <span class="card-badge badge-pickup">Ramassage seulement</span>
         </a>
-        <a class="card ql-b" href="#option-b">
+        <a class="card ql-b" href="#option-b" data-quote-id="option-b">
           <div class="card-label">Option B — Cèdre, petite plateforme</div>
           <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
           <div class="card-total">$4 459,88</div>
@@ -432,24 +382,52 @@
           <br>
           <span class="card-badge badge-pickup">Ramassage seulement</span>
         </a>
-        <a class="card ql-d" href="#option-d">
+        <a class="card ql-d" href="#option-d" data-quote-id="option-d">
           <div class="card-label">Option D — Cèdre, 2 flottants + livraison</div>
           <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
           <div class="card-total">$8 323,04</div>
           <div class="card-total-note">taxes incluses</div>
           <span class="card-badge badge-installed">Livraison + installation incluses</span>
         </a>
-        <a class="card ql-e" href="#option-e">
+        <a class="card ql-e" href="#option-e" data-quote-id="option-e">
           <div class="card-label">Option E — Plastique gris, 8'×12' + livraison</div>
           <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
           <div class="card-total">$9 239,39</div>
           <div class="card-total-note">taxes incluses</div>
           <span class="card-badge badge-installed">Livraison + installation incluses</span>
         </a>
-        <a class="card ql-f" href="#option-f">
+        <a class="card ql-f" href="#option-f" data-quote-id="option-f">
           <div class="card-label">Option F — Plastique gris, 10'×12' + livraison</div>
           <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
           <div class="card-total">$10 377,64</div>
+          <div class="card-total-note">taxes incluses</div>
+          <span class="card-badge badge-installed">Livraison + installation incluses</span>
+        </a>
+        <a class="card ql-j" href="#option-j" data-quote-id="option-j">
+          <div class="card-label">Option J — Cèdre, 4'×16', 3 sections + livraison</div>
+          <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
+          <div class="card-total">$9 673,43</div>
+          <div class="card-total-note">taxes incluses</div>
+          <span class="card-badge badge-installed">Livraison + installation incluses</span>
+        </a>
+        <a class="card ql-k" href="#option-k" data-quote-id="option-k">
+          <div class="card-label">Option K — Cèdre, 4'×16', 4 sections + livraison</div>
+          <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
+          <div class="card-total">$10 840,42</div>
+          <div class="card-total-note">taxes incluses</div>
+          <span class="card-badge badge-installed">Livraison + installation incluses</span>
+        </a>
+        <a class="card ql-l" href="#option-l" data-quote-id="option-l">
+          <div class="card-label">Option L — Plastique gris, 4'×16', 4 sections</div>
+          <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
+          <div class="card-total">$12 316,58</div>
+          <div class="card-total-note">taxes incluses</div>
+          <span class="card-badge badge-installed">Livraison + installation incluses</span>
+        </a>
+        <a class="card ql-m" href="#option-m" data-quote-id="option-m">
+          <div class="card-label">Option M — Mixte cèdre/plastique, 3 sections 4'×16'</div>
+          <div class="card-devis">Devis #E25742 · 14 mai 2026</div>
+          <div class="card-total">$10 649,21</div>
           <div class="card-total-note">taxes incluses</div>
           <span class="card-badge badge-installed">Livraison + installation incluses</span>
         </a>
@@ -458,17 +436,24 @@
     <div class="company-group">
       <div class="company-group-label">Quais Laurentiens</div>
       <div class="company-group-cards">
-        <a class="card laurentiens" href="#option-c">
+        <a class="card laurentiens" href="#option-c" data-quote-id="option-c">
           <div class="card-label">Option C — Type Absolu, cèdre</div>
           <div class="card-devis">Soumission #13052026-01 · 13 mai 2026</div>
           <div class="card-total">$8 443,76</div>
           <div class="card-total-note">taxes incluses</div>
           <span class="card-badge badge-installed">Livraison + installation incluses</span>
         </a>
-        <a class="card laur-g" href="#option-g">
+        <a class="card laur-g" href="#option-g" data-quote-id="option-g">
           <div class="card-label">Option G — Type Absolu, cèdre, 3 sections</div>
           <div class="card-devis">Soumission #01062026-01 · 1 juin 2026</div>
           <div class="card-total">$9 882,31</div>
+          <div class="card-total-note">taxes incluses</div>
+          <span class="card-badge badge-installed">Livraison + installation incluses</span>
+        </a>
+        <a class="card laur-i" href="#option-i" data-quote-id="option-i">
+          <div class="card-label">Option I — Type Absolu, cèdre, 4'×16' poteaux</div>
+          <div class="card-devis">Soumission #16062026-02 · 16 juin 2026</div>
+          <div class="card-total">$10 223,58</div>
           <div class="card-total-note">taxes incluses</div>
           <span class="card-badge badge-installed">Livraison + installation incluses</span>
         </a>
@@ -477,7 +462,7 @@
     <div class="company-group">
       <div class="company-group-label">Quai2go</div>
       <div class="company-group-cards">
-        <a class="card quai2go" href="#option-h">
+        <a class="card quai2go" href="#option-h" data-quote-id="option-h">
           <div class="card-label">Option H — Cèdre, livraison + installation</div>
           <div class="card-devis">Soumission #639 · 10 juin 2026</div>
           <div class="card-total">$10 102,74</div>
@@ -490,154 +475,240 @@
 
   <!-- TABLEAU COMPARATIF -->
   <section class="comparison">
-    <h2>Tableau comparatif</h2>
+    <div class="comparison-header-row">
+      <h2>Tableau comparatif</h2>
+      <label class="archived-toggle">
+        <input type="checkbox" id="show-archived"> Afficher archivés
+      </label>
+    </div>
     <div class="comparison-table-wrap">
       <table class="comparison-table">
         <thead>
           <tr>
             <th>Critère</th>
-            <th class="col-ql-a">A — Lafantaisie<br><small>Cèdre, ramassage</small></th>
-            <th class="col-ql-b">B — Lafantaisie<br><small>Cèdre, ramassage</small></th>
-            <th class="col-laurentiens">C — Laurentiens<br><small>Cèdre, livr.+install.</small></th>
-            <th class="col-ql-d">D — Lafantaisie<br><small>Cèdre, livr.+install.</small></th>
-            <th class="col-ql-e">E — Lafantaisie<br><small>Plastique, 8'×12'</small></th>
-            <th class="col-ql-f">F — Lafantaisie<br><small>Plastique, 10'×12'</small></th>
-            <th class="col-laur-g">G — Laurentiens<br><small>Cèdre, livr.+install.</small></th>
-            <th class="col-quai2go">H — Quai2go<br><small>Cèdre, livr.+install.</small></th>
+            <th class="col-ql-a" data-quote-id="option-a">A — Lafantaisie<br><small>Cèdre, ramassage</small></th>
+            <th class="col-ql-b" data-quote-id="option-b">B — Lafantaisie<br><small>Cèdre, ramassage</small></th>
+            <th class="col-laurentiens" data-quote-id="option-c">C — Laurentiens<br><small>Cèdre, livr.+install.</small></th>
+            <th class="col-ql-d" data-quote-id="option-d">D — Lafantaisie<br><small>Cèdre, livr.+install.</small></th>
+            <th class="col-ql-e" data-quote-id="option-e">E — Lafantaisie<br><small>Plastique, 8'×12'</small></th>
+            <th class="col-ql-f" data-quote-id="option-f">F — Lafantaisie<br><small>Plastique, 10'×12'</small></th>
+            <th class="col-laur-g" data-quote-id="option-g">G — Laurentiens<br><small>Cèdre, livr.+install.</small></th>
+            <th class="col-quai2go" data-quote-id="option-h">H — Quai2go<br><small>Cèdre, livr.+install.</small></th>
+            <th class="col-laur-i" data-quote-id="option-i">I — Laurentiens<br><small>Cèdre, livr.+install.</small></th>
+            <th class="col-ql-j" data-quote-id="option-j">J — Lafantaisie<br><small>Cèdre, 4'×16' 3 sect.</small></th>
+            <th class="col-ql-k" data-quote-id="option-k">K — Lafantaisie<br><small>Cèdre, 4'×16' 4 sect.</small></th>
+            <th class="col-ql-l" data-quote-id="option-l">L — Lafantaisie<br><small>Plastique, 4 sections</small></th>
+            <th class="col-ql-m" data-quote-id="option-m">M — Lafantaisie<br><small>Mixte, 4'×16' 3 sect.</small></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Section sur poteaux / pieux</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×10'</td>
-            <td>—</td>
-            <td>1 × 4'×16'</td>
+            <td data-quote-id="option-a">1 × 4'×10'</td>
+            <td data-quote-id="option-b">1 × 4'×10'</td>
+            <td data-quote-id="option-c">1 × 4'×10'</td>
+            <td data-quote-id="option-d">1 × 4'×10'</td>
+            <td data-quote-id="option-e">1 × 4'×10'</td>
+            <td data-quote-id="option-f">1 × 4'×10'</td>
+            <td data-quote-id="option-g">—</td>
+            <td data-quote-id="option-h">1 × 4'×16'</td>
+            <td data-quote-id="option-i">1 × 4'×16'</td>
+            <td data-quote-id="option-j">1 × 4'×16'</td>
+            <td data-quote-id="option-k">1 × 4'×16'</td>
+            <td data-quote-id="option-l">1 × 4'×16'</td>
+            <td data-quote-id="option-m">1 × 4'×16' <small>(cèdre)</small></td>
           </tr>
           <tr>
             <td>Section semi-flottante</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×14'</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×10'</td>
-            <td>1 × 4'×16'</td>
-            <td>1 × 4'×16'</td>
+            <td data-quote-id="option-a">1 × 4'×10'</td>
+            <td data-quote-id="option-b">1 × 4'×10'</td>
+            <td data-quote-id="option-c">1 × 4'×14'</td>
+            <td data-quote-id="option-d">1 × 4'×10'</td>
+            <td data-quote-id="option-e">1 × 4'×10'</td>
+            <td data-quote-id="option-f">1 × 4'×10'</td>
+            <td data-quote-id="option-g">1 × 4'×16'</td>
+            <td data-quote-id="option-h">1 × 4'×16'</td>
+            <td data-quote-id="option-i">1 × 4'×16'</td>
+            <td data-quote-id="option-j">1 × 4'×16'</td>
+            <td data-quote-id="option-k">1 × 4'×16'</td>
+            <td data-quote-id="option-l">1 × 4'×16'</td>
+            <td data-quote-id="option-m">1 × 4'×16' <small>(plastique)</small></td>
           </tr>
           <tr class="highlight-row">
             <td>Plateforme(s) flottante(s)</td>
-            <td>1 × 8'×12' <small>(96 pi²)</small></td>
-            <td>1 × 4'×10' <small>(40 pi²)</small></td>
-            <td>1 × 10'×12' <small>(120 pi²)</small></td>
-            <td>1 × 4'×10' + 1 × 8'×12' <small>(136 pi²)</small></td>
-            <td>1 × 4'×10' + 1 × 8'×12' <small>(136 pi²)</small></td>
-            <td>1 × 4'×10' + 1 × 10'×12' <small>(160 pi²)</small></td>
-            <td>1 × 4'×14' + 1 × 8'×12' <small>(136 pi²)</small></td>
-            <td>1 × 10'×12' <small>(120 pi²)</small></td>
+            <td data-quote-id="option-a">1 × 8'×12' <small>(96 pi²)</small></td>
+            <td data-quote-id="option-b">1 × 4'×10' <small>(40 pi²)</small></td>
+            <td data-quote-id="option-c">1 × 10'×12' <small>(120 pi²)</small></td>
+            <td data-quote-id="option-d">1 × 4'×10' + 1 × 8'×12' <small>(136 pi²)</small></td>
+            <td data-quote-id="option-e">1 × 4'×10' + 1 × 8'×12' <small>(136 pi²)</small></td>
+            <td data-quote-id="option-f">1 × 4'×10' + 1 × 10'×12' <small>(160 pi²)</small></td>
+            <td data-quote-id="option-g">1 × 4'×14' + 1 × 8'×12' <small>(136 pi²)</small></td>
+            <td data-quote-id="option-h">1 × 10'×12' <small>(120 pi²)</small></td>
+            <td data-quote-id="option-i">1 × 10'×12' <small>(120 pi²)</small></td>
+            <td data-quote-id="option-j">1 × 10'×12' <small>(120 pi²)</small></td>
+            <td data-quote-id="option-k">1 × 4'×10' + 1 × 10'×12' <small>(160 pi²)</small></td>
+            <td data-quote-id="option-l">1 × 4'×10' + 1 × 10'×12' <small>(160 pi²)</small></td>
+            <td data-quote-id="option-m">1 × 10'×12' <small>(120 pi², plastique)</small></td>
           </tr>
           <tr>
             <td>Longueur totale</td>
-            <td>28'</td>
-            <td>30'</td>
-            <td>34'</td>
-            <td>38'</td>
-            <td>38'</td>
-            <td>40'</td>
-            <td>38'</td>
-            <td>32'</td>
+            <td data-quote-id="option-a">28'</td>
+            <td data-quote-id="option-b">30'</td>
+            <td data-quote-id="option-c">34'</td>
+            <td data-quote-id="option-d">38'</td>
+            <td data-quote-id="option-e">38'</td>
+            <td data-quote-id="option-f">40'</td>
+            <td data-quote-id="option-g">38'</td>
+            <td data-quote-id="option-h">32'</td>
+            <td data-quote-id="option-i">42'</td>
+            <td data-quote-id="option-j">42'</td>
+            <td data-quote-id="option-k">52'</td>
+            <td data-quote-id="option-l">52'</td>
+            <td data-quote-id="option-m">42'</td>
           </tr>
           <tr>
             <td>Platelage</td>
-            <td>Cèdre rouge</td>
-            <td>Cèdre rouge</td>
-            <td>Cèdre</td>
-            <td>Cèdre rouge</td>
-            <td>Plastique gris</td>
-            <td>Plastique gris</td>
-            <td>Cèdre</td>
-            <td>Cèdre rouge</td>
+            <td data-quote-id="option-a">Cèdre rouge</td>
+            <td data-quote-id="option-b">Cèdre rouge</td>
+            <td data-quote-id="option-c">Cèdre</td>
+            <td data-quote-id="option-d">Cèdre rouge</td>
+            <td data-quote-id="option-e">Plastique gris</td>
+            <td data-quote-id="option-f">Plastique gris</td>
+            <td data-quote-id="option-g">Cèdre</td>
+            <td data-quote-id="option-h">Cèdre rouge</td>
+            <td data-quote-id="option-i">Cèdre</td>
+            <td data-quote-id="option-j">Cèdre rouge</td>
+            <td data-quote-id="option-k">Cèdre rouge</td>
+            <td data-quote-id="option-l">Plastique gris</td>
+            <td data-quote-id="option-m">Mixte (cèdre + plastique)</td>
           </tr>
           <tr>
             <td>Structure flottante</td>
-            <td>Alu standard</td>
-            <td>Alu standard</td>
-            <td>Alu caisson 16"</td>
-            <td>Alu standard</td>
-            <td>Alu standard</td>
-            <td>Alu standard</td>
-            <td>Alu caisson 16"</td>
-            <td>Alu standard</td>
+            <td data-quote-id="option-a">Alu standard</td>
+            <td data-quote-id="option-b">Alu standard</td>
+            <td data-quote-id="option-c">Alu caisson 16"</td>
+            <td data-quote-id="option-d">Alu standard</td>
+            <td data-quote-id="option-e">Alu standard</td>
+            <td data-quote-id="option-f">Alu standard</td>
+            <td data-quote-id="option-g">Alu caisson 16"</td>
+            <td data-quote-id="option-h">Alu standard</td>
+            <td data-quote-id="option-i">Alu caisson 16"</td>
+            <td data-quote-id="option-j">Alu standard</td>
+            <td data-quote-id="option-k">Alu standard</td>
+            <td data-quote-id="option-l">Alu standard</td>
+            <td data-quote-id="option-m">Alu standard</td>
           </tr>
           <tr>
             <td>Garantie</td>
-            <td>20 ans</td>
-            <td>20 ans</td>
-            <td>Non spécifiée</td>
-            <td>20 ans</td>
-            <td>20 ans</td>
-            <td>20 ans</td>
-            <td>Non spécifiée</td>
-            <td>None</td>
+            <td data-quote-id="option-a">20 ans</td>
+            <td data-quote-id="option-b">20 ans</td>
+            <td data-quote-id="option-c">Non spécifiée</td>
+            <td data-quote-id="option-d">20 ans</td>
+            <td data-quote-id="option-e">20 ans</td>
+            <td data-quote-id="option-f">20 ans</td>
+            <td data-quote-id="option-g">Non spécifiée</td>
+            <td data-quote-id="option-h">None</td>
+            <td data-quote-id="option-i">Non spécifiée</td>
+            <td data-quote-id="option-j">20 ans</td>
+            <td data-quote-id="option-k">20 ans</td>
+            <td data-quote-id="option-l">20 ans</td>
+            <td data-quote-id="option-m">20 ans</td>
           </tr>
           <tr>
             <td>Livraison</td>
-            <td class="no">Ramassage seul.</td>
-            <td class="no">Ramassage seul.</td>
-            <td class="yes">Incluse ($550)</td>
-            <td class="yes">Incluse (~$600)</td>
-            <td class="yes">Incluse (~$600)</td>
-            <td class="yes">Incluse (~$600)</td>
-            <td class="yes">Incluse ($550)</td>
-            <td class="yes">Incluse ($600)</td>
+            <td class="no" data-quote-id="option-a">Ramassage seul.</td>
+            <td class="no" data-quote-id="option-b">Ramassage seul.</td>
+            <td class="yes" data-quote-id="option-c">Incluse ($550)</td>
+            <td class="yes" data-quote-id="option-d">Incluse (~$600)</td>
+            <td class="yes" data-quote-id="option-e">Incluse (~$600)</td>
+            <td class="yes" data-quote-id="option-f">Incluse (~$600)</td>
+            <td class="yes" data-quote-id="option-g">Incluse ($550)</td>
+            <td class="yes" data-quote-id="option-h">Incluse ($600)</td>
+            <td class="yes" data-quote-id="option-i">Incluse ($550)</td>
+            <td class="yes" data-quote-id="option-j">Incluse (~$600)</td>
+            <td class="yes" data-quote-id="option-k">Incluse (~$600)</td>
+            <td class="yes" data-quote-id="option-l">Incluse ($600)</td>
+            <td class="yes" data-quote-id="option-m">Incluse (~$600)</td>
           </tr>
           <tr>
             <td>Installation</td>
-            <td class="no">Non incluse</td>
-            <td class="no">Non incluse</td>
-            <td class="yes">Incluse ($550)</td>
-            <td class="yes">Incluse ($600)</td>
-            <td class="yes">Incluse ($600)</td>
-            <td class="yes">Incluse ($600)</td>
-            <td class="yes">Incluse ($650)</td>
-            <td class="yes">Incluse ($800)</td>
+            <td class="no" data-quote-id="option-a">Non incluse</td>
+            <td class="no" data-quote-id="option-b">Non incluse</td>
+            <td class="yes" data-quote-id="option-c">Incluse ($550)</td>
+            <td class="yes" data-quote-id="option-d">Incluse ($600)</td>
+            <td class="yes" data-quote-id="option-e">Incluse ($600)</td>
+            <td class="yes" data-quote-id="option-f">Incluse ($600)</td>
+            <td class="yes" data-quote-id="option-g">Incluse ($650)</td>
+            <td class="yes" data-quote-id="option-h">Incluse ($800)</td>
+            <td class="yes" data-quote-id="option-i">Incluse ($650)</td>
+            <td class="yes" data-quote-id="option-j">Incluse ($600)</td>
+            <td class="yes" data-quote-id="option-k">Incluse ($600)</td>
+            <td class="yes" data-quote-id="option-l">Incluse ($600)</td>
+            <td class="yes" data-quote-id="option-m">Incluse ($600)</td>
+          </tr>
+          <tr>
+            <td>Livraison prévue</td>
+            <td data-quote-id="option-a">—</td>
+            <td data-quote-id="option-b">—</td>
+            <td data-quote-id="option-c">—</td>
+            <td data-quote-id="option-d">Fin juin 2026</td>
+            <td data-quote-id="option-e">Fin juin 2026</td>
+            <td data-quote-id="option-f">Fin juin 2026</td>
+            <td data-quote-id="option-g">Juillet 2026</td>
+            <td data-quote-id="option-h">—</td>
+            <td data-quote-id="option-i">Fin juillet 2026</td>
+            <td data-quote-id="option-j">Mi juillet 2026</td>
+            <td data-quote-id="option-k">Mi juillet 2026</td>
+            <td data-quote-id="option-l">Mi juillet 2026</td>
+            <td data-quote-id="option-m">—</td>
           </tr>
           <tr>
             <td>Validité du devis</td>
-            <td>7 jours</td>
-            <td>7 jours</td>
-            <td>30 jours</td>
-            <td>7 jours</td>
-            <td>7 jours</td>
-            <td>7 jours</td>
-            <td>30 jours</td>
-            <td>7 jours</td>
+            <td data-quote-id="option-a">7 jours</td>
+            <td data-quote-id="option-b">7 jours</td>
+            <td data-quote-id="option-c">30 jours</td>
+            <td data-quote-id="option-d">7 jours</td>
+            <td data-quote-id="option-e">7 jours</td>
+            <td data-quote-id="option-f">7 jours</td>
+            <td data-quote-id="option-g">30 jours</td>
+            <td data-quote-id="option-h">7 jours</td>
+            <td data-quote-id="option-i">30 jours</td>
+            <td data-quote-id="option-j">7 jours</td>
+            <td data-quote-id="option-k">7 jours</td>
+            <td data-quote-id="option-l">7 jours</td>
+            <td data-quote-id="option-m">7 jours</td>
           </tr>
           <tr>
             <td>Modalités d'acompte</td>
-            <td>30%</td>
-            <td>30%</td>
-            <td>40%+30%+30%</td>
-            <td>30%</td>
-            <td>30%</td>
-            <td>30%</td>
-            <td>40%+30%+30%</td>
-            <td>~83%</td>
+            <td data-quote-id="option-a">30%</td>
+            <td data-quote-id="option-b">30%</td>
+            <td data-quote-id="option-c">40%+30%+30%</td>
+            <td data-quote-id="option-d">30%</td>
+            <td data-quote-id="option-e">30%</td>
+            <td data-quote-id="option-f">30%</td>
+            <td data-quote-id="option-g">40%+30%+30%</td>
+            <td data-quote-id="option-h">~83%</td>
+            <td data-quote-id="option-i">40%+30%+30%</td>
+            <td data-quote-id="option-j">30%</td>
+            <td data-quote-id="option-k">30%</td>
+            <td data-quote-id="option-l">30%</td>
+            <td data-quote-id="option-m">10%</td>
           </tr>
           <tr class="grand-row">
             <td>TOTAL (taxes incl.)</td>
-            <td>$5 462,46</td>
-            <td>$4 459,88</td>
-            <td>$8 443,76</td>
-            <td>$8 323,04</td>
-            <td>$9 239,39</td>
-            <td>$10 377,64</td>
-            <td>$9 882,31</td>
-            <td>$10 102,74</td>
+            <td data-quote-id="option-a">$5 462,46</td>
+            <td data-quote-id="option-b">$4 459,88</td>
+            <td data-quote-id="option-c">$8 443,76</td>
+            <td data-quote-id="option-d">$8 323,04</td>
+            <td data-quote-id="option-e">$9 239,39</td>
+            <td data-quote-id="option-f">$10 377,64</td>
+            <td data-quote-id="option-g">$9 882,31</td>
+            <td data-quote-id="option-h">$10 102,74</td>
+            <td data-quote-id="option-i">$10 223,58</td>
+            <td data-quote-id="option-j">$9 673,43</td>
+            <td data-quote-id="option-k">$10 840,42</td>
+            <td data-quote-id="option-l">$12 316,58</td>
+            <td data-quote-id="option-m">$10 649,21</td>
           </tr>
         </tbody>
       </table>
@@ -648,10 +719,10 @@
   <section class="schematics">
     <h2>Schémas (vue de dessus, à l'échelle)</h2>
     <div class="schematics-grid">
-      <div class="schematic-card">
+      <div class="schematic-card" data-quote-id="option-a">
         <div class="schematic-title">Option A — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25548</span></div>
-        <div class="schematic-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="306" height="153" viewBox="0 0 306 153" style="border-radius:8px;display:block;max-width:100%;height:auto">
-<rect width="306" height="153" fill="#dbeafe" rx="8"/>
+        <div class="schematic-svg-wrap"><a href="#option-a"><svg xmlns="http://www.w3.org/2000/svg" width="306" height="165" viewBox="0 0 306 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="306" height="165" fill="#dbeafe" rx="8"/>
 <rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
 <text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
 <text x="85.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
@@ -668,8 +739,9 @@
 <rect x="220" y="23.0" width="72" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
 <text x="256.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
 <text x="256.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">8'×12'</text>
-<text x="166.0" y="150" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 28'</text>
-</svg></div>
+<text x="166.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 28'</text>
+<text x="166.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre rouge</text>
+</svg></a></div>
         <div class="schematic-legend">
           <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
           <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
@@ -677,10 +749,10 @@
           <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
         </div>
       </div>
-      <div class="schematic-card">
+      <div class="schematic-card" data-quote-id="option-b">
         <div class="schematic-title">Option B — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25742</span></div>
-        <div class="schematic-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="324" height="81" viewBox="0 0 324 81" style="border-radius:8px;display:block;max-width:100%;height:auto">
-<rect width="324" height="81" fill="#dbeafe" rx="8"/>
+        <div class="schematic-svg-wrap"><a href="#option-b"><svg xmlns="http://www.w3.org/2000/svg" width="324" height="93" viewBox="0 0 324 93" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="324" height="93" fill="#dbeafe" rx="8"/>
 <rect x="14" y="21" width="26" height="40" fill="#8B6743" rx="3"/>
 <text x="27.0" y="44.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 41.0)">Berge</text>
 <text x="85.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
@@ -696,8 +768,9 @@
 <text x="265.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottant</text>
 <rect x="220" y="23.0" width="90" height="36" fill="#38bdf8" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
 <text x="265.0" y="46.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×10'</text>
-<text x="175.0" y="78" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 30'</text>
-</svg></div>
+<text x="175.0" y="79" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 30'</text>
+<text x="175.0" y="90" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre rouge</text>
+</svg></a></div>
         <div class="schematic-legend">
           <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
           <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
@@ -705,10 +778,10 @@
           <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
         </div>
       </div>
-      <div class="schematic-card">
+      <div class="schematic-card" data-quote-id="option-c">
         <div class="schematic-title">Option C — Quais Laurentiens <span style="font-weight:400;color:#9ca3af">Soumission #13052026-01</span></div>
-        <div class="schematic-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="360" height="153" viewBox="0 0 360 153" style="border-radius:8px;display:block;max-width:100%;height:auto">
-<rect width="360" height="153" fill="#dbeafe" rx="8"/>
+        <div class="schematic-svg-wrap"><a href="#option-c"><svg xmlns="http://www.w3.org/2000/svg" width="360" height="165" viewBox="0 0 360 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="360" height="165" fill="#dbeafe" rx="8"/>
 <rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
 <text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
 <text x="85.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
@@ -725,8 +798,9 @@
 <rect x="256" y="23.0" width="90" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
 <text x="301.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
 <text x="301.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">10'×12'</text>
-<text x="193.0" y="150" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 34'</text>
-</svg></div>
+<text x="193.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 34'</text>
+<text x="193.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre</text>
+</svg></a></div>
         <div class="schematic-legend">
           <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
           <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
@@ -734,10 +808,10 @@
           <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
         </div>
       </div>
-      <div class="schematic-card">
+      <div class="schematic-card" data-quote-id="option-d">
         <div class="schematic-title">Option D — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25742</span></div>
-        <div class="schematic-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="396" height="153" viewBox="0 0 396 153" style="border-radius:8px;display:block;max-width:100%;height:auto">
-<rect width="396" height="153" fill="#dbeafe" rx="8"/>
+        <div class="schematic-svg-wrap"><a href="#option-d"><svg xmlns="http://www.w3.org/2000/svg" width="396" height="165" viewBox="0 0 396 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="396" height="165" fill="#dbeafe" rx="8"/>
 <rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
 <text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
 <text x="85.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
@@ -757,8 +831,9 @@
 <rect x="310" y="23.0" width="72" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
 <text x="346.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
 <text x="346.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">8'×12'</text>
-<text x="211.0" y="150" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 38'</text>
-</svg></div>
+<text x="211.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 38'</text>
+<text x="211.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre rouge</text>
+</svg></a></div>
         <div class="schematic-legend">
           <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
           <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
@@ -766,10 +841,10 @@
           <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
         </div>
       </div>
-      <div class="schematic-card">
+      <div class="schematic-card" data-quote-id="option-e">
         <div class="schematic-title">Option E — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25742</span></div>
-        <div class="schematic-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="396" height="153" viewBox="0 0 396 153" style="border-radius:8px;display:block;max-width:100%;height:auto">
-<rect width="396" height="153" fill="#dbeafe" rx="8"/>
+        <div class="schematic-svg-wrap"><a href="#option-e"><svg xmlns="http://www.w3.org/2000/svg" width="396" height="165" viewBox="0 0 396 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="396" height="165" fill="#dbeafe" rx="8"/>
 <rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
 <text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
 <text x="85.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
@@ -789,8 +864,9 @@
 <rect x="310" y="23.0" width="72" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
 <text x="346.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
 <text x="346.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">8'×12'</text>
-<text x="211.0" y="150" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 38'</text>
-</svg></div>
+<text x="211.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 38'</text>
+<text x="211.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Plastique gris</text>
+</svg></a></div>
         <div class="schematic-legend">
           <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
           <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
@@ -798,10 +874,10 @@
           <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
         </div>
       </div>
-      <div class="schematic-card">
+      <div class="schematic-card" data-quote-id="option-f">
         <div class="schematic-title">Option F — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25742</span></div>
-        <div class="schematic-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="414" height="153" viewBox="0 0 414 153" style="border-radius:8px;display:block;max-width:100%;height:auto">
-<rect width="414" height="153" fill="#dbeafe" rx="8"/>
+        <div class="schematic-svg-wrap"><a href="#option-f"><svg xmlns="http://www.w3.org/2000/svg" width="414" height="165" viewBox="0 0 414 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="414" height="165" fill="#dbeafe" rx="8"/>
 <rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
 <text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
 <text x="85.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
@@ -821,8 +897,9 @@
 <rect x="310" y="23.0" width="90" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
 <text x="355.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
 <text x="355.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">10'×12'</text>
-<text x="220.0" y="150" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 40'</text>
-</svg></div>
+<text x="220.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 40'</text>
+<text x="220.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Plastique gris</text>
+</svg></a></div>
         <div class="schematic-legend">
           <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
           <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
@@ -830,10 +907,10 @@
           <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
         </div>
       </div>
-      <div class="schematic-card">
+      <div class="schematic-card" data-quote-id="option-g">
         <div class="schematic-title">Option G — Quais Laurentiens <span style="font-weight:400;color:#9ca3af">Soumission #01062026-01</span></div>
-        <div class="schematic-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="396" height="153" viewBox="0 0 396 153" style="border-radius:8px;display:block;max-width:100%;height:auto">
-<rect width="396" height="153" fill="#dbeafe" rx="8"/>
+        <div class="schematic-svg-wrap"><a href="#option-g"><svg xmlns="http://www.w3.org/2000/svg" width="396" height="165" viewBox="0 0 396 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="396" height="165" fill="#dbeafe" rx="8"/>
 <rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
 <text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
 <text x="112.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Semi-flottant</text>
@@ -846,8 +923,9 @@
 <rect x="310" y="23.0" width="72" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
 <text x="346.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
 <text x="346.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">8'×12'</text>
-<text x="211.0" y="150" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 38'</text>
-</svg></div>
+<text x="211.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 38'</text>
+<text x="211.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre</text>
+</svg></a></div>
         <div class="schematic-legend">
           <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
           <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
@@ -855,10 +933,10 @@
           <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
         </div>
       </div>
-      <div class="schematic-card">
+      <div class="schematic-card" data-quote-id="option-h">
         <div class="schematic-title">Option H — Quai2go <span style="font-weight:400;color:#9ca3af">Soumission #639</span></div>
-        <div class="schematic-svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="432" height="153" viewBox="0 0 432 153" style="border-radius:8px;display:block;max-width:100%;height:auto">
-<rect width="432" height="153" fill="#dbeafe" rx="8"/>
+        <div class="schematic-svg-wrap"><a href="#option-h"><svg xmlns="http://www.w3.org/2000/svg" width="432" height="165" viewBox="0 0 432 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="432" height="165" fill="#dbeafe" rx="8"/>
 <rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
 <text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
 <text x="112.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
@@ -875,8 +953,165 @@
 <rect x="328" y="23.0" width="90" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
 <text x="373.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
 <text x="373.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">10'×12'</text>
-<text x="229.0" y="150" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 32'</text>
-</svg></div>
+<text x="229.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 32'</text>
+<text x="229.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre rouge</text>
+</svg></a></div>
+        <div class="schematic-legend">
+          <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
+          <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
+          <span><span class="legend-dot" style="background:#38bdf8"></span>Flottant</span>
+          <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
+        </div>
+      </div>
+      <div class="schematic-card" data-quote-id="option-i">
+        <div class="schematic-title">Option I — Quais Laurentiens <span style="font-weight:400;color:#9ca3af">Soumission #16062026-02</span></div>
+        <div class="schematic-svg-wrap"><a href="#option-i"><svg xmlns="http://www.w3.org/2000/svg" width="432" height="165" viewBox="0 0 432 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="432" height="165" fill="#dbeafe" rx="8"/>
+<rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
+<text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
+<text x="112.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
+<rect x="40" y="59.0" width="144" height="36" fill="#94a3b8" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<circle cx="47" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="47" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<text x="112.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="256.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Semi-flottant</text>
+<rect x="184" y="59.0" width="144" height="36" fill="#7dd3fc" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="256.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="373.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottant</text>
+<rect x="328" y="23.0" width="90" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="373.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
+<text x="373.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">10'×12'</text>
+<text x="229.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 42'</text>
+<text x="229.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre</text>
+</svg></a></div>
+        <div class="schematic-legend">
+          <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
+          <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
+          <span><span class="legend-dot" style="background:#38bdf8"></span>Flottant</span>
+          <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
+        </div>
+      </div>
+      <div class="schematic-card" data-quote-id="option-j">
+        <div class="schematic-title">Option J — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25742</span></div>
+        <div class="schematic-svg-wrap"><a href="#option-j"><svg xmlns="http://www.w3.org/2000/svg" width="432" height="165" viewBox="0 0 432 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="432" height="165" fill="#dbeafe" rx="8"/>
+<rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
+<text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
+<text x="112.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
+<rect x="40" y="59.0" width="144" height="36" fill="#94a3b8" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<circle cx="47" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="47" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<text x="112.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="256.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Semi-flottant</text>
+<rect x="184" y="59.0" width="144" height="36" fill="#7dd3fc" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="256.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="373.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottant</text>
+<rect x="328" y="23.0" width="90" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="373.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
+<text x="373.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">10'×12'</text>
+<text x="229.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 42'</text>
+<text x="229.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre rouge</text>
+</svg></a></div>
+        <div class="schematic-legend">
+          <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
+          <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
+          <span><span class="legend-dot" style="background:#38bdf8"></span>Flottant</span>
+          <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
+        </div>
+      </div>
+      <div class="schematic-card" data-quote-id="option-k">
+        <div class="schematic-title">Option K — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25742</span></div>
+        <div class="schematic-svg-wrap"><a href="#option-k"><svg xmlns="http://www.w3.org/2000/svg" width="522" height="165" viewBox="0 0 522 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="522" height="165" fill="#dbeafe" rx="8"/>
+<rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
+<text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
+<text x="112.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
+<rect x="40" y="59.0" width="144" height="36" fill="#94a3b8" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<circle cx="47" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="47" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<text x="112.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="256.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Semi-flottant</text>
+<rect x="184" y="59.0" width="144" height="36" fill="#7dd3fc" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="256.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="373.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottant</text>
+<rect x="328" y="59.0" width="90" height="36" fill="#38bdf8" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="373.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×10'</text>
+<text x="463.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottant</text>
+<rect x="418" y="23.0" width="90" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="463.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
+<text x="463.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">10'×12'</text>
+<text x="274.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 52'</text>
+<text x="274.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Cèdre rouge</text>
+</svg></a></div>
+        <div class="schematic-legend">
+          <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
+          <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
+          <span><span class="legend-dot" style="background:#38bdf8"></span>Flottant</span>
+          <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
+        </div>
+      </div>
+      <div class="schematic-card" data-quote-id="option-l">
+        <div class="schematic-title">Option L — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25742</span></div>
+        <div class="schematic-svg-wrap"><a href="#option-l"><svg xmlns="http://www.w3.org/2000/svg" width="522" height="165" viewBox="0 0 522 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="522" height="165" fill="#dbeafe" rx="8"/>
+<rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
+<text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
+<text x="112.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
+<rect x="40" y="59.0" width="144" height="36" fill="#94a3b8" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<circle cx="47" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="47" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<text x="112.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="256.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Semi-flottant</text>
+<rect x="184" y="59.0" width="144" height="36" fill="#7dd3fc" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="256.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="373.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottant</text>
+<rect x="328" y="59.0" width="90" height="36" fill="#38bdf8" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="373.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×10'</text>
+<text x="463.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottant</text>
+<rect x="418" y="23.0" width="90" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="463.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
+<text x="463.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">10'×12'</text>
+<text x="274.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 52'</text>
+<text x="274.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Plastique gris</text>
+</svg></a></div>
+        <div class="schematic-legend">
+          <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
+          <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
+          <span><span class="legend-dot" style="background:#38bdf8"></span>Flottant</span>
+          <span><span class="legend-dot" style="background:#0369a1"></span>Plateforme terminale</span>
+        </div>
+      </div>
+      <div class="schematic-card" data-quote-id="option-m">
+        <div class="schematic-title">Option M — Quai Lafantaisie <span style="font-weight:400;color:#9ca3af">Devis #E25742</span></div>
+        <div class="schematic-svg-wrap"><a href="#option-m"><svg xmlns="http://www.w3.org/2000/svg" width="432" height="165" viewBox="0 0 432 165" style="border-radius:8px;display:block;max-width:100%;height:auto">
+<rect width="432" height="165" fill="#dbeafe" rx="8"/>
+<rect x="14" y="21" width="26" height="112" fill="#8B6743" rx="3"/>
+<text x="27.0" y="80.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)" transform="rotate(-90 27.0 77.0)">Berge</text>
+<text x="112.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Poteaux</text>
+<rect x="40" y="59.0" width="144" height="36" fill="#94a3b8" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<circle cx="47" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="47" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="66.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<circle cx="177" cy="88.0" r="3" fill="rgba(0,0,0,0.22)"/>
+<text x="112.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="256.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Semi-flottant</text>
+<rect x="184" y="59.0" width="144" height="36" fill="#7dd3fc" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="256.0" y="82.0" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="white" font-weight="600">4'×16'</text>
+<text x="373.0" y="13" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="#334155">Flottant</text>
+<rect x="328" y="23.0" width="90" height="108" fill="#0369a1" fill-opacity="0.88" stroke="white" stroke-width="1.5" rx="2"/>
+<text x="373.0" y="72.0" text-anchor="middle" font-size="8" font-family="system-ui,sans-serif" fill="rgba(255,255,255,0.85)">Flottant</text>
+<text x="373.0" y="88.0" text-anchor="middle" font-size="12" font-family="system-ui,sans-serif" fill="white" font-weight="700">10'×12'</text>
+<text x="229.0" y="151" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Longueur totale : 42'</text>
+<text x="229.0" y="162" text-anchor="middle" font-size="9" font-family="system-ui,sans-serif" fill="#334155" opacity="0.7">Platelage : Mixte (cèdre + plastique)</text>
+</svg></a></div>
         <div class="schematic-legend">
           <span><span class="legend-dot" style="background:#94a3b8"></span>Poteaux</span>
           <span><span class="legend-dot" style="background:#7dd3fc"></span>Semi-flottant</span>
@@ -887,10 +1122,11 @@
     </div>
   </section>
 
-    <!-- DÉTAIL DES SOUMISSIONS -->
+  <!-- DÉTAIL DES SOUMISSIONS -->
   <section class="details">
     <h2>Détail des soumissions</h2>
-    <div class="quote-block ql-a" id="option-a">
+    <div id="active-details">
+    <div class="quote-block ql-a" id="option-a" data-quote-id="option-a" data-quote-index="0">
       <div class="quote-color-bar"></div>
       <div class="quote-header">
         <div class="quote-header-left">
@@ -900,6 +1136,7 @@
         <div class="quote-header-right">
           <div class="quote-total-label">Total (taxes incl.)</div>
           <div class="quote-total-amount">$5 462,46</div>
+          <button class="archive-btn" data-quote-id="option-a">Archiver</button>
         </div>
       </div>
       <div class="quote-table-wrap">
@@ -993,7 +1230,8 @@
           <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$5 462,46</td></tr>
         </tbody>
       </table>
-      </div>      <div class="quote-footer">
+      </div>
+      <div class="quote-footer">
         <span><strong>Ramassage :</strong> 4701 route 117N, Sainte-Agathe-des-Monts</span>
         <span><strong>Garantie :</strong> 20 ans</span>
         <span><strong>Validité du devis :</strong> 7 jours</span>
@@ -1001,7 +1239,7 @@
       </div>
       <div class="quote-notes"><span class="quote-notes-label">Notes</span> Livraison/Installation, pas avant fin juin</div>
     </div>
-    <div class="quote-block ql-b" id="option-b">
+    <div class="quote-block ql-b" id="option-b" data-quote-id="option-b" data-quote-index="1">
       <div class="quote-color-bar"></div>
       <div class="quote-header">
         <div class="quote-header-left">
@@ -1011,6 +1249,7 @@
         <div class="quote-header-right">
           <div class="quote-total-label">Total (taxes incl.)</div>
           <div class="quote-total-amount">$4 459,88</div>
+          <button class="archive-btn" data-quote-id="option-b">Archiver</button>
         </div>
       </div>
       <div class="quote-table-wrap">
@@ -1111,7 +1350,8 @@
           <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$4 459,88</td></tr>
         </tbody>
       </table>
-      </div>      <div class="quote-footer">
+      </div>
+      <div class="quote-footer">
         <span><strong>Ramassage :</strong> 4701 route 117N, Sainte-Agathe-des-Monts</span>
         <span><strong>Garantie :</strong> 20 ans</span>
         <span><strong>Validité du devis :</strong> 7 jours</span>
@@ -1119,7 +1359,7 @@
       </div>
       <div class="quote-notes"><span class="quote-notes-label">Notes</span> Livraison/Installation, pas avant fin juin</div>
     </div>
-    <div class="quote-block laurentiens" id="option-c">
+    <div class="quote-block laurentiens" id="option-c" data-quote-id="option-c" data-quote-index="2">
       <div class="quote-color-bar"></div>
       <div class="quote-header">
         <div class="quote-header-left">
@@ -1129,6 +1369,7 @@
         <div class="quote-header-right">
           <div class="quote-total-label">Total (taxes incl.)</div>
           <div class="quote-total-amount">$8 443,76</div>
+          <button class="archive-btn" data-quote-id="option-c">Archiver</button>
         </div>
       </div>
       <div class="quote-table-wrap">
@@ -1237,14 +1478,15 @@
           <tr class="row-grand-total"><td colspan="3">TOTAL</td><td>$8 443,76</td></tr>
         </tbody>
       </table>
-      </div>      <div class="quote-footer">
+      </div>
+      <div class="quote-footer">
         <span><strong>Livraison + installation incluses</strong></span>
         <span><strong>Validité :</strong> 30 jours</span>
         <span><strong>Acompte :</strong> 40% + 30% à fabrication + 30% à livraison</span>
         <span><strong>Adresse :</strong> 2379 chemin Jean-Adam, St-Sauveur</span>
       </div>
     </div>
-    <div class="quote-block ql-d" id="option-d">
+    <div class="quote-block ql-d" id="option-d" data-quote-id="option-d" data-quote-index="3">
       <div class="quote-color-bar"></div>
       <div class="quote-header">
         <div class="quote-header-left">
@@ -1254,6 +1496,7 @@
         <div class="quote-header-right">
           <div class="quote-total-label">Total (taxes incl.)</div>
           <div class="quote-total-amount">$8 323,04</div>
+          <button class="archive-btn" data-quote-id="option-d">Archiver</button>
         </div>
       </div>
       <div class="quote-table-wrap">
@@ -1362,7 +1605,8 @@
           <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$8 323,04</td></tr>
         </tbody>
       </table>
-      </div>      <div class="quote-footer">
+      </div>
+      <div class="quote-footer">
         <span><strong>Livraison + installation incluses :</strong> (prix livraison à confirmer)</span>
         <span><strong>Garantie :</strong> 20 ans</span>
         <span><strong>Validité :</strong> 7 jours</span>
@@ -1370,7 +1614,7 @@
       </div>
       <div class="quote-notes"><span class="quote-notes-label">Notes</span> Livraison/Installation, pas avant fin juin</div>
     </div>
-    <div class="quote-block ql-e" id="option-e">
+    <div class="quote-block ql-e" id="option-e" data-quote-id="option-e" data-quote-index="4">
       <div class="quote-color-bar"></div>
       <div class="quote-header">
         <div class="quote-header-left">
@@ -1380,6 +1624,7 @@
         <div class="quote-header-right">
           <div class="quote-total-label">Total (taxes incl.)</div>
           <div class="quote-total-amount">$9 239,39</div>
+          <button class="archive-btn" data-quote-id="option-e">Archiver</button>
         </div>
       </div>
       <div class="quote-table-wrap">
@@ -1488,7 +1733,8 @@
           <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$9 239,39</td></tr>
         </tbody>
       </table>
-      </div>      <div class="quote-footer">
+      </div>
+      <div class="quote-footer">
         <span><strong>Livraison + installation incluses :</strong> (prix livraison à confirmer)</span>
         <span><strong>Garantie :</strong> 20 ans</span>
         <span><strong>Validité :</strong> 7 jours</span>
@@ -1496,7 +1742,7 @@
       </div>
       <div class="quote-notes"><span class="quote-notes-label">Notes</span> Livraison/Installation, pas avant fin juin</div>
     </div>
-    <div class="quote-block ql-f" id="option-f">
+    <div class="quote-block ql-f" id="option-f" data-quote-id="option-f" data-quote-index="5">
       <div class="quote-color-bar"></div>
       <div class="quote-header">
         <div class="quote-header-left">
@@ -1506,6 +1752,7 @@
         <div class="quote-header-right">
           <div class="quote-total-label">Total (taxes incl.)</div>
           <div class="quote-total-amount">$10 377,64</div>
+          <button class="archive-btn" data-quote-id="option-f">Archiver</button>
         </div>
       </div>
       <div class="quote-table-wrap">
@@ -1614,7 +1861,8 @@
           <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$10 377,64</td></tr>
         </tbody>
       </table>
-      </div>      <div class="quote-footer">
+      </div>
+      <div class="quote-footer">
         <span><strong>Livraison + installation incluses :</strong> (prix livraison à confirmer)</span>
         <span><strong>Garantie :</strong> 20 ans</span>
         <span><strong>Validité :</strong> 7 jours</span>
@@ -1622,7 +1870,7 @@
       </div>
       <div class="quote-notes"><span class="quote-notes-label">Notes</span> Livraison/Installation, pas avant fin juin</div>
     </div>
-    <div class="quote-block laur-g" id="option-g">
+    <div class="quote-block laur-g" id="option-g" data-quote-id="option-g" data-quote-index="6">
       <div class="quote-color-bar"></div>
       <div class="quote-header">
         <div class="quote-header-left">
@@ -1632,6 +1880,7 @@
         <div class="quote-header-right">
           <div class="quote-total-label">Total (taxes incl.)</div>
           <div class="quote-total-amount">$9 882,31</div>
+          <button class="archive-btn" data-quote-id="option-g">Archiver</button>
         </div>
       </div>
       <div class="quote-table-wrap">
@@ -1782,14 +2031,15 @@
           <tr class="row-grand-total"><td colspan="3">TOTAL</td><td>$9 882,31</td></tr>
         </tbody>
       </table>
-      </div>      <div class="quote-footer">
+      </div>
+      <div class="quote-footer">
         <span><strong>Livraison + installation incluses</strong></span>
         <span><strong>Livraison prévue :</strong> Juillet 2026</span>
         <span><strong>Validité :</strong> 30 jours</span>
         <span><strong>Acompte :</strong> 40% à la commande · 30% à fabrication · 30% à livraison</span>
       </div>
     </div>
-    <div class="quote-block quai2go" id="option-h">
+    <div class="quote-block quai2go" id="option-h" data-quote-id="option-h" data-quote-index="7">
       <div class="quote-color-bar"></div>
       <div class="quote-header">
         <div class="quote-header-left">
@@ -1799,6 +2049,7 @@
         <div class="quote-header-right">
           <div class="quote-total-label">Total (taxes incl.)</div>
           <div class="quote-total-amount">$10 102,74</div>
+          <button class="archive-btn" data-quote-id="option-h">Archiver</button>
         </div>
       </div>
       <div class="quote-table-wrap">
@@ -1942,7 +2193,8 @@
           <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$10 102,74</td></tr>
         </tbody>
       </table>
-      </div>      <div class="quote-footer">
+      </div>
+      <div class="quote-footer">
         <span><strong>Livraison + installation incluses</strong></span>
         <span><strong>Validité :</strong> 7 jours</span>
         <span><strong>Dépôt :</strong> $8 429,85 pour débuter</span>
@@ -1950,8 +2202,648 @@
       </div>
       <div class="quote-notes"><span class="quote-notes-label">Notes</span> Prix des matériaux peuvent varier. Soumission valide 7 jours.</div>
     </div>
-  </section>
+    <div class="quote-block laur-i" id="option-i" data-quote-id="option-i" data-quote-index="8">
+      <div class="quote-color-bar"></div>
+      <div class="quote-header">
+        <div class="quote-header-left">
+          <h3>Quais Laurentiens — Option I</h3>
+          <p>Soumission #16062026-02 · 16 juin 2026 · Vendeur : Pierre Labelle · (450) 227-2342</p>
+        </div>
+        <div class="quote-header-right">
+          <div class="quote-total-label">Total (taxes incl.)</div>
+          <div class="quote-total-amount">$10 223,58</div>
+          <button class="archive-btn" data-quote-id="option-i">Archiver</button>
+        </div>
+      </div>
+      <div class="quote-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Qté</th>
+            <th>Prix unit.</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-section"><td colspan="4">Sections de quai — Type Absolu (caisson alu 16") · Platelage cèdre</td></tr>
+          <tr>
+            <td>Quai sur pieux 4'×16'</td>
+            <td>1</td>
+            <td>$1 600,00</td>
+            <td>$1 600,00</td>
+          </tr>
+          <tr>
+            <td>Quai semi-flottant 4'×16'</td>
+            <td>1</td>
+            <td>$1 920,00</td>
+            <td>$1 920,00</td>
+          </tr>
+          <tr>
+            <td>Quai flottant <strong>10'×12'</strong></td>
+            <td>1</td>
+            <td>$4 200,00</td>
+            <td>$4 200,00</td>
+          </tr>
+          <tr class="row-section"><td colspan="4">Accessoires</td></tr>
+          <tr>
+            <td>Pentures</td>
+            <td>2</td>
+            <td>$150,00</td>
+            <td>$300,00</td>
+          </tr>
+          <tr>
+            <td>Blocs d'ancrage 150 lbs</td>
+            <td>4</td>
+            <td>$50,00</td>
+            <td>$200,00</td>
+          </tr>
+          <tr>
+            <td>Chaîne galvanisée 5/16</td>
+            <td>50 pi</td>
+            <td>$6,00</td>
+            <td>$300,00</td>
+          </tr>
+          <tr>
+            <td>Taquets 8"</td>
+            <td>4</td>
+            <td>$40,00</td>
+            <td>$160,00</td>
+          </tr>
+          <tr>
+            <td class="included">Manille et plaque d'attache</td>
+            <td>2</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Kit de départ 2×4</td>
+            <td>1</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Supports de pieux</td>
+            <td>2</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Pieux 4'</td>
+            <td>2</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Base de pieux 6×6</td>
+            <td>2</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Cap de pieux</td>
+            <td>2</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Défense de coin</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Pare-choc noir</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Échelle 3 marches</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Coffre déporter 2×4</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Support parasol</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr>
+            <td class="included">Fouet 5000 lb</td>
+            <td>—</td>
+            <td>—</td>
+            <td class="included">inclus</td>
+          </tr>
+          <tr class="row-section"><td colspan="4">Livraison et installation</td></tr>
+          <tr>
+            <td>Livraison (Lac Dufresne, St-Lucie)</td>
+            <td>1</td>
+            <td>$550,00</td>
+            <td>$550,00</td>
+          </tr>
+          <tr>
+            <td>Installation</td>
+            <td>1</td>
+            <td>$650,00</td>
+            <td>$650,00</td>
+          </tr>
+          <tr class="row-subtotal"><td colspan="3">Sous-total avant rabais</td><td>$9 880,00</td></tr>
+          <tr class="row-discount"><td colspan="3">Rabais (10%)</td><td>−$988,00</td></tr>
+          <tr class="row-subtotal"><td colspan="3">Prix après rabais</td><td>$8 892,00</td></tr>
+          <tr class="row-tax"><td colspan="3">TPS (5%)</td><td>$444,60</td></tr>
+          <tr class="row-tax"><td colspan="3">TVQ (9,975%)</td><td>$886,98</td></tr>
+          <tr class="row-grand-total"><td colspan="3">TOTAL</td><td>$10 223,58</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="quote-footer">
+        <span><strong>Livraison + installation incluses</strong></span>
+        <span><strong>Livraison prévue :</strong> Fin juillet 2026</span>
+        <span><strong>Validité :</strong> 30 jours</span>
+        <span><strong>Acompte :</strong> 40% à la commande · 30% à fabrication · 30% à livraison</span>
+      </div>
+    </div>
+    <div class="quote-block ql-j" id="option-j" data-quote-id="option-j" data-quote-index="9">
+      <div class="quote-color-bar"></div>
+      <div class="quote-header">
+        <div class="quote-header-left">
+          <h3>Quai Lafantaisie — Option J</h3>
+          <p>Devis #E25742 (rév.) · 14 mai 2026 · Cèdre rouge · Poteaux 4'×16' · Livraison + installation incluses</p>
+        </div>
+        <div class="quote-header-right">
+          <div class="quote-total-label">Total (taxes incl.)</div>
+          <div class="quote-total-amount">$9 673,43</div>
+          <button class="archive-btn" data-quote-id="option-j">Archiver</button>
+        </div>
+      </div>
+      <div class="quote-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Qté</th>
+            <th>Prix unit.</th>
+            <th>Escompte</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-section"><td colspan="5">Sections de quai — Cèdre rouge</td></tr>
+          <tr>
+            <td>Quai aluminium sur poteaux — surface cèdre rouge 4'×16'</td>
+            <td>1</td>
+            <td>$1 360,00</td>
+            <td>18%</td>
+            <td>$1 115,20</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium semi-flottant — surface cèdre rouge 4'×16'</td>
+            <td>1</td>
+            <td>$1 640,00</td>
+            <td>18%</td>
+            <td>$1 344,80</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium flottant — surface cèdre rouge <strong>10'×12'</strong></td>
+            <td>1</td>
+            <td>$3 825,00</td>
+            <td>18%</td>
+            <td>$3 136,50</td>
+          </tr>
+          <tr class="row-section"><td colspan="5">Accessoires</td></tr>
+          <tr>
+            <td>Pentures ALU-BOIS (4 unités)</td>
+            <td>1</td>
+            <td>$170,00</td>
+            <td>—</td>
+            <td>$170,00</td>
+          </tr>
+          <tr>
+            <td>Ensemble pentures flottantes amovibles (4 unités)</td>
+            <td>3</td>
+            <td>$175,00</td>
+            <td>—</td>
+            <td>$525,00</td>
+          </tr>
+          <tr>
+            <td>Poteau acier galvanisé 1 5/8 — 4 pieds</td>
+            <td>2</td>
+            <td>$26,00</td>
+            <td>—</td>
+            <td>$52,00</td>
+          </tr>
+          <tr>
+            <td>Plaque de départ alu martelé 2'×4' avec pentures</td>
+            <td>2</td>
+            <td>$350,00</td>
+            <td>—</td>
+            <td>$700,00</td>
+          </tr>
+          <tr>
+            <td>Plaque à chaîne amovible</td>
+            <td>2</td>
+            <td>$85,00</td>
+            <td>—</td>
+            <td>$170,00</td>
+          </tr>
+          <tr class="row-section"><td colspan="5">Livraison et installation</td></tr>
+          <tr>
+            <td>Livraison (prix à confirmer selon distance)</td>
+            <td>1</td>
+            <td>$600,00</td>
+            <td>—</td>
+            <td>$600,00</td>
+          </tr>
+          <tr>
+            <td>Installation</td>
+            <td>1</td>
+            <td>$600,00</td>
+            <td>—</td>
+            <td>$600,00</td>
+          </tr>
+          <tr class="row-subtotal"><td colspan="4">Sous-total (après escomptes)</td><td>$8 413,50</td></tr>
+          <tr class="row-discount"><td colspan="4">Escompte total</td><td>−$1 228,50</td></tr>
+          <tr class="row-tax"><td colspan="4">TPS (5%)</td><td>$420,68</td></tr>
+          <tr class="row-tax"><td colspan="4">TVQ (9,975%)</td><td>$839,25</td></tr>
+          <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$9 673,43</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="quote-footer">
+        <span><strong>Livraison + installation incluses :</strong> (prix livraison à confirmer)</span>
+        <span><strong>Garantie :</strong> 20 ans</span>
+        <span><strong>Validité :</strong> 7 jours</span>
+        <span><strong>Dépôt :</strong> 30% à la commande</span>
+      </div>
+    </div>
+    <div class="quote-block ql-k" id="option-k" data-quote-id="option-k" data-quote-index="10">
+      <div class="quote-color-bar"></div>
+      <div class="quote-header">
+        <div class="quote-header-left">
+          <h3>Quai Lafantaisie — Option K</h3>
+          <p>Devis #E25742 (rév.) · 14 mai 2026 · Cèdre rouge · 4 sections 4'×16' · Livraison + installation incluses</p>
+        </div>
+        <div class="quote-header-right">
+          <div class="quote-total-label">Total (taxes incl.)</div>
+          <div class="quote-total-amount">$10 840,42</div>
+          <button class="archive-btn" data-quote-id="option-k">Archiver</button>
+        </div>
+      </div>
+      <div class="quote-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Qté</th>
+            <th>Prix unit.</th>
+            <th>Escompte</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-section"><td colspan="5">Sections de quai — Cèdre rouge</td></tr>
+          <tr>
+            <td>Quai aluminium sur poteaux — surface cèdre rouge 4'×16'</td>
+            <td>1</td>
+            <td>$1 360,00</td>
+            <td>18%</td>
+            <td>$1 115,20</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium semi-flottant — surface cèdre rouge 4'×16'</td>
+            <td>1</td>
+            <td>$1 640,00</td>
+            <td>18%</td>
+            <td>$1 344,80</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium flottant — surface cèdre rouge 4'×10'</td>
+            <td>1</td>
+            <td>$1 450,00</td>
+            <td>30%</td>
+            <td>$1 015,00</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium flottant — surface cèdre rouge <strong>10'×12'</strong></td>
+            <td>1</td>
+            <td>$3 825,00</td>
+            <td>18%</td>
+            <td>$3 136,50</td>
+          </tr>
+          <tr class="row-section"><td colspan="5">Accessoires</td></tr>
+          <tr>
+            <td>Pentures ALU-BOIS (4 unités)</td>
+            <td>1</td>
+            <td>$170,00</td>
+            <td>—</td>
+            <td>$170,00</td>
+          </tr>
+          <tr>
+            <td>Ensemble pentures flottantes amovibles (4 unités)</td>
+            <td>3</td>
+            <td>$175,00</td>
+            <td>—</td>
+            <td>$525,00</td>
+          </tr>
+          <tr>
+            <td>Poteau acier galvanisé 1 5/8 — 4 pieds</td>
+            <td>2</td>
+            <td>$26,00</td>
+            <td>—</td>
+            <td>$52,00</td>
+          </tr>
+          <tr>
+            <td>Plaque de départ alu martelé 2'×4' avec pentures</td>
+            <td>2</td>
+            <td>$350,00</td>
+            <td>—</td>
+            <td>$700,00</td>
+          </tr>
+          <tr>
+            <td>Plaque à chaîne amovible</td>
+            <td>2</td>
+            <td>$85,00</td>
+            <td>—</td>
+            <td>$170,00</td>
+          </tr>
+          <tr class="row-section"><td colspan="5">Livraison et installation</td></tr>
+          <tr>
+            <td>Livraison (prix à confirmer selon distance)</td>
+            <td>1</td>
+            <td>$600,00</td>
+            <td>—</td>
+            <td>$600,00</td>
+          </tr>
+          <tr>
+            <td>Installation</td>
+            <td>1</td>
+            <td>$600,00</td>
+            <td>—</td>
+            <td>$600,00</td>
+          </tr>
+          <tr class="row-subtotal"><td colspan="4">Sous-total (après escomptes)</td><td>$9 428,50</td></tr>
+          <tr class="row-discount"><td colspan="4">Escompte total</td><td>−$1 663,50</td></tr>
+          <tr class="row-tax"><td colspan="4">TPS (5%)</td><td>$471,43</td></tr>
+          <tr class="row-tax"><td colspan="4">TVQ (9,975%)</td><td>$940,49</td></tr>
+          <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$10 840,42</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="quote-footer">
+        <span><strong>Livraison + installation incluses :</strong> (prix livraison à confirmer)</span>
+        <span><strong>Garantie :</strong> 20 ans</span>
+        <span><strong>Validité :</strong> 7 jours</span>
+        <span><strong>Dépôt :</strong> 30% à la commande</span>
+      </div>
+    </div>
+    <div class="quote-block ql-l" id="option-l" data-quote-id="option-l" data-quote-index="11">
+      <div class="quote-color-bar"></div>
+      <div class="quote-header">
+        <div class="quote-header-left">
+          <h3>Quai Lafantaisie — Option L</h3>
+          <p>Devis #E25742 (rév.) · 14 mai 2026 · Plastique gris · 4 sections 4'×16' · Livraison + installation incluses</p>
+        </div>
+        <div class="quote-header-right">
+          <div class="quote-total-label">Total (taxes incl.)</div>
+          <div class="quote-total-amount">$12 316,58</div>
+          <button class="archive-btn" data-quote-id="option-l">Archiver</button>
+        </div>
+      </div>
+      <div class="quote-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Qté</th>
+            <th>Prix unit.</th>
+            <th>Escompte</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-section"><td colspan="5">Sections de quai — Plastique gris</td></tr>
+          <tr>
+            <td>Quai aluminium sur poteaux — surface de plastique gris 4'×16'</td>
+            <td>1</td>
+            <td>$1 720,00</td>
+            <td>18%</td>
+            <td>$1 410,40</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium semi-flottant — surface de plastique gris 4'×16'</td>
+            <td>1</td>
+            <td>$2 000,00</td>
+            <td>18%</td>
+            <td>$1 640,00</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium flottant — surface de plastique gris 4'×10'</td>
+            <td>1</td>
+            <td>$1 650,00</td>
+            <td>30%</td>
+            <td>$1 155,00</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium flottant — surface de plastique gris <strong>10'×12'</strong></td>
+            <td>1</td>
+            <td>$4 500,00</td>
+            <td>18%</td>
+            <td>$3 690,00</td>
+          </tr>
+          <tr class="row-section"><td colspan="5">Accessoires</td></tr>
+          <tr>
+            <td>Pentures ALU-BOIS (4 unités)</td>
+            <td>1</td>
+            <td>$170,00</td>
+            <td>—</td>
+            <td>$170,00</td>
+          </tr>
+          <tr>
+            <td>Ensemble pentures flottantes amovibles (4 unités)</td>
+            <td>3</td>
+            <td>$175,00</td>
+            <td>—</td>
+            <td>$525,00</td>
+          </tr>
+          <tr>
+            <td>Poteau acier galvanisé 1 5/8 — 4 pieds</td>
+            <td>2</td>
+            <td>$26,00</td>
+            <td>—</td>
+            <td>$52,00</td>
+          </tr>
+          <tr>
+            <td>Plaque de départ alu martelé 2'×4' avec pentures</td>
+            <td>2</td>
+            <td>$350,00</td>
+            <td>—</td>
+            <td>$700,00</td>
+          </tr>
+          <tr>
+            <td>Plaque à chaîne amovible</td>
+            <td>2</td>
+            <td>$85,00</td>
+            <td>—</td>
+            <td>$170,00</td>
+          </tr>
+          <tr class="row-section"><td colspan="5">Livraison et installation</td></tr>
+          <tr>
+            <td>Livraison</td>
+            <td>1</td>
+            <td>$600,00</td>
+            <td>—</td>
+            <td>$600,00</td>
+          </tr>
+          <tr>
+            <td>Installation</td>
+            <td>1</td>
+            <td>$600,00</td>
+            <td>—</td>
+            <td>$600,00</td>
+          </tr>
+          <tr class="row-subtotal"><td colspan="4">Sous-total (après escomptes)</td><td>$10 712,40</td></tr>
+          <tr class="row-discount"><td colspan="4">Escompte total</td><td>−$1 974,60</td></tr>
+          <tr class="row-tax"><td colspan="4">TPS (5%)</td><td>$535,62</td></tr>
+          <tr class="row-tax"><td colspan="4">TVQ (9,975%)</td><td>$1 068,56</td></tr>
+          <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$12 316,58</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="quote-footer">
+        <span><strong>Livraison + installation incluses</strong></span>
+        <span><strong>Garantie :</strong> 20 ans</span>
+        <span><strong>Validité :</strong> 7 jours</span>
+        <span><strong>Dépôt :</strong> 30% à la commande</span>
+      </div>
+    </div>
+    <div class="quote-block ql-m" id="option-m" data-quote-id="option-m" data-quote-index="12">
+      <div class="quote-color-bar"></div>
+      <div class="quote-header">
+        <div class="quote-header-left">
+          <h3>Quai Lafantaisie — Option M</h3>
+          <p>Devis #E25742 · 14 mai 2026 · Cèdre (poteaux) + plastique gris · 3 sections 4'×16' · Livraison + installation incluses</p>
+        </div>
+        <div class="quote-header-right">
+          <div class="quote-total-label">Total (taxes incl.)</div>
+          <div class="quote-total-amount">$10 649,21</div>
+          <button class="archive-btn" data-quote-id="option-m">Archiver</button>
+        </div>
+      </div>
+      <div class="quote-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Qté</th>
+            <th>Prix unit.</th>
+            <th>Escompte</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-section"><td colspan="5">Sections de quai — Mixte cèdre/plastique gris</td></tr>
+          <tr>
+            <td>Quai aluminium sur poteaux — surface cèdre rouge 4'×16'</td>
+            <td>1</td>
+            <td>$1 360,00</td>
+            <td>18%</td>
+            <td>$1 115,20</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium semi-flottant — surface plastique gris 4'×16'</td>
+            <td>1</td>
+            <td>$2 000,00</td>
+            <td>18%</td>
+            <td>$1 640,00</td>
+          </tr>
+          <tr>
+            <td>Quai aluminium flottant — surface plastique gris <strong>10'×12'</strong></td>
+            <td>1</td>
+            <td>$4 500,00</td>
+            <td>18%</td>
+            <td>$3 690,00</td>
+          </tr>
+          <tr class="row-section"><td colspan="5">Accessoires</td></tr>
+          <tr>
+            <td>Pentures ALU-BOIS (4 unités)</td>
+            <td>1</td>
+            <td>$170,00</td>
+            <td>—</td>
+            <td>$170,00</td>
+          </tr>
+          <tr>
+            <td>Ensemble pentures flottantes amovibles (4 unités)</td>
+            <td>3</td>
+            <td>$175,00</td>
+            <td>—</td>
+            <td>$525,00</td>
+          </tr>
+          <tr>
+            <td>Poteau acier galvanisé 1 5/8 — 4 pieds</td>
+            <td>2</td>
+            <td>$26,00</td>
+            <td>—</td>
+            <td>$52,00</td>
+          </tr>
+          <tr>
+            <td>Plaque de départ alu martelé 2'×4' avec pentures</td>
+            <td>2</td>
+            <td>$350,00</td>
+            <td>—</td>
+            <td>$700,00</td>
+          </tr>
+          <tr>
+            <td>Plaque à chaîne amovible</td>
+            <td>2</td>
+            <td>$85,00</td>
+            <td>—</td>
+            <td>$170,00</td>
+          </tr>
+          <tr class="row-section"><td colspan="5">Livraison et installation</td></tr>
+          <tr>
+            <td>Livraison (prix à confirmer selon distance)</td>
+            <td>1</td>
+            <td>$600,00</td>
+            <td>—</td>
+            <td>$600,00</td>
+          </tr>
+          <tr>
+            <td>Installation</td>
+            <td>1</td>
+            <td>$600,00</td>
+            <td>—</td>
+            <td>$600,00</td>
+          </tr>
+          <tr class="row-subtotal"><td colspan="4">Sous-total (après escomptes)</td><td>$9 262,20</td></tr>
+          <tr class="row-discount"><td colspan="4">Escompte total</td><td>−$1 414,80</td></tr>
+          <tr class="row-tax"><td colspan="4">TPS (5%)</td><td>$463,11</td></tr>
+          <tr class="row-tax"><td colspan="4">TVQ (9,975%)</td><td>$923,90</td></tr>
+          <tr class="row-grand-total"><td colspan="4">TOTAL</td><td>$10 649,21</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="quote-footer">
+        <span><strong>Livraison + installation incluses :</strong> (prix livraison à confirmer)</span>
+        <span><strong>Garantie :</strong> 20 ans</span>
+        <span><strong>Validité :</strong> 7 jours</span>
+        <span><strong>Dépôt :</strong> 10% à la commande</span>
+      </div>
+    </div>
+    </div>  </section>
 
+  <!-- SOUMISSIONS ARCHIVÉES (collapsed, populated by JS) -->
+  <details class="archived-details" id="archived-details-section" hidden>
+    <summary>Soumissions archivées (<span id="archived-count">0</span>)</summary>
+    <div id="archived-details-inner"></div>
+  </details>
 
   <!-- CONTACTS -->
   <section class="contacts">
@@ -2008,5 +2900,68 @@
   </footer>
 
 </div>
+<script>
+  const archived = JSON.parse(localStorage.getItem('archivedQuotes') || '{}');
+
+  function applyArchivedState() {
+    const activeContainer   = document.getElementById('active-details');
+    const archivedContainer = document.getElementById('archived-details-inner');
+    const archivedSection   = document.getElementById('archived-details-section');
+    const archivedCount     = document.getElementById('archived-count');
+
+    // Summary cards & schematics: toggle data-archived attribute
+    document.querySelectorAll('.card[data-quote-id], .schematic-card[data-quote-id]').forEach(el => {
+      if (archived[el.dataset.quoteId]) el.setAttribute('data-archived', 'true');
+      else el.removeAttribute('data-archived');
+    });
+
+    // Comparison table: toggle data-archived on th/td per quote
+    document.querySelectorAll('.comparison-table [data-quote-id]').forEach(el => {
+      if (archived[el.dataset.quoteId]) el.setAttribute('data-archived', 'true');
+      else el.removeAttribute('data-archived');
+    });
+
+    // Detail blocks: move between containers, sorted by original order
+    const blocks = Array.from(document.querySelectorAll('.quote-block[data-quote-id]'))
+      .sort((a, b) => parseInt(a.dataset.quoteIndex) - parseInt(b.dataset.quoteIndex));
+
+    blocks.forEach(block => {
+      const id = block.dataset.quoteId;
+      const btn = block.querySelector('.archive-btn');
+      if (archived[id]) {
+        archivedContainer.appendChild(block);
+        if (btn) { btn.textContent = 'Désarchiver'; btn.classList.add('is-archived'); }
+      } else {
+        activeContainer.appendChild(block);
+        if (btn) { btn.textContent = 'Archiver'; btn.classList.remove('is-archived'); }
+      }
+    });
+
+    // Show/hide archived section
+    const count = archivedContainer.children.length;
+    archivedSection.hidden = count === 0;
+    archivedCount.textContent = count;
+  }
+
+  function toggleArchived(id) {
+    if (archived[id]) delete archived[id];
+    else archived[id] = true;
+    localStorage.setItem('archivedQuotes', JSON.stringify(archived));
+    applyArchivedState();
+  }
+
+  // Wire up archive buttons (event delegation)
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.archive-btn');
+    if (btn) toggleArchived(btn.dataset.quoteId);
+  });
+
+  // Comparison table checkbox
+  document.getElementById('show-archived').addEventListener('change', function () {
+    document.body.classList.toggle('show-archived', this.checked);
+  });
+
+  applyArchivedState();
+</script>
 </body>
 </html>
