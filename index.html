@@ -2901,7 +2901,16 @@
 
 </div>
 <script>
-  const archived = JSON.parse(localStorage.getItem('archivedQuotes') || '{}');
+  const defaultArchived = { "option-a": true,"option-b": true,"option-c": true,"option-d": true,"option-e": true,"option-f": true,"option-g": true, };
+  const ARCHIVE_VERSION = "2026-06-18";
+  let archived;
+  if (localStorage.getItem('archivedVersion') === ARCHIVE_VERSION) {
+    archived = JSON.parse(localStorage.getItem('archivedQuotes') || '{}');
+  } else {
+    archived = Object.assign({}, defaultArchived);
+    localStorage.setItem('archivedQuotes', JSON.stringify(archived));
+    localStorage.setItem('archivedVersion', ARCHIVE_VERSION);
+  }
 
   function applyArchivedState() {
     const activeContainer   = document.getElementById('active-details');
